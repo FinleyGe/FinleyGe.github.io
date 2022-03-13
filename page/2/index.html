@@ -71,66 +71,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-gRPC框架" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/09/09/gRPC%E6%A1%86%E6%9E%B6/" class="article-date">
-  <time class="dt-published" datetime="2021-09-09T11:12:14.000Z" itemprop="datePublished">2021-09-09</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>►<a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B/%E6%A1%86%E6%9E%B6/">框架</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/09/09/gRPC%E6%A1%86%E6%9E%B6/">gRPC框架</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="什么是RPC框架？"><a href="#什么是RPC框架？" class="headerlink" title="什么是RPC框架？"></a>什么是RPC框架？</h1><p><strong>RPC</strong>框架，即<strong>Remote Procedure Call</strong>（远程过程调用），是一个<strong>计算机通信协议</strong>。<br>该协议允许计算机远程调用另一台计算机上的程序，实现Server&#x2F;Client模式。</p>
-<h1 id="什么是gRPC框架？"><a href="#什么是gRPC框架？" class="headerlink" title="什么是gRPC框架？"></a>什么是gRPC框架？</h1><p>gRPC框架的官方文档：<a target="_blank" rel="noopener" href="https://grpc.io/">https://grpc.io/</a><br>gRPC框架是Google开发的一款开源的、高性能的、<strong>通用</strong>的面向HTTP&#x2F;2的RPC框架。</p>
-<h2 id="为什么是通用的？"><a href="#为什么是通用的？" class="headerlink" title="为什么是通用的？"></a>为什么是通用的？</h2><p>gRPC可以实现多语言端的通信。包括但不限于Golang, Python, Dart等。</p>
-<p>gRPC框架使用<strong>protocol buffers</strong>作为其<strong>IDL</strong>语言。<br><strong>IDL</strong>: Interface Description Language ,接口定义语言。</p>
-<p>简单说来，通过protocol buffers描述定义各种接口和各种数据结构，再通过<strong>编译器</strong>（<strong>Protoc</strong>）自动化实现各个语言版本。<br>当然这种实现仅仅是提供一个框架，而要实现其功能，还需要实际上填充代码。</p>
-<h2 id="如何使用gRPC框架"><a href="#如何使用gRPC框架" class="headerlink" title="如何使用gRPC框架"></a>如何使用gRPC框架</h2><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>此处略去，可以参考官方文档[^1]。</p>
-<h3 id="写Protocol-Buffers"><a href="#写Protocol-Buffers" class="headerlink" title="写Protocol Buffers"></a>写Protocol Buffers</h3><p>Protocol Buffers的文件后缀是 <strong>.proto</strong>。<br>Protocol Buffers是一款灵活的(Flexible)，高效的(Effcient)，自动化(Automated)的接口定义语言。</p>
-<h4 id="定义服务"><a href="#定义服务" class="headerlink" title="定义服务"></a>定义服务</h4><p>通过一下语句可以定义一个服务。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">service ServiceName &#123;</span><br><span class="line">    // something...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="定义方法"><a href="#定义方法" class="headerlink" title="定义方法"></a>定义方法</h4><p>通过以下语句定义一个方法。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpc MethodName(parameterName) returns (returnName) &#123;&#125;</span><br></pre></td></tr></table></figure>
-<p>一般说来，参数和返回值是自定义的一个Message</p>
-<h4 id="定义Message"><a href="#定义Message" class="headerlink" title="定义Message"></a>定义Message</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">message MessageName&#123;</span><br><span class="line">    typeName1 valueName1 = Tag1;</span><br><span class="line">    typeName2 valueName2 = Tag2;</span><br><span class="line">    // something...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>typeName表示类型，Protocol Bufffers支持的类型包括但不限于: int32</p>
-<p><em>未完待续。。。</em><br>[^1]:<a target="_blank" rel="noopener" href="https://grpc.io/">https://grpc.io/</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/09/09/gRPC%E6%A1%86%E6%9E%B6/" data-id="cl0opj92i0005ea0n5zv6acwi" data-title="gRPC框架" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gRPC%E6%A1%86%E6%9E%B6/" rel="tag">gRPC框架</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">学习笔记</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag">编程</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
     <article id="post-浙江工业大学相关信息" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/08/23/%E6%B5%99%E6%B1%9F%E5%B7%A5%E4%B8%9A%E5%A4%A7%E5%AD%A6%E7%9B%B8%E5%85%B3%E4%BF%A1%E6%81%AF/" class="article-date">
@@ -1267,7 +1207,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">十一月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">九月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">八月 2021</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">十一月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">九月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">八月 2021</a></li></ul>
     </div>
   </div>
 
@@ -1278,10 +1218,6 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
-        
-          <li>
-            <a href="/2022/03/13/hello-world/">Hello World</a>
-          </li>
         
           <li>
             <a href="/2021/11/29/ubuntu%E9%85%8D%E7%BD%AE%E5%AE%9E%E8%AE%B0/">ubuntu配置实记</a>
@@ -1297,6 +1233,10 @@
         
           <li>
             <a href="/2021/10/23/Cpp%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/">Cpp踩坑记录</a>
+          </li>
+        
+          <li>
+            <a href="/2021/10/23/js%E8%B8%A9%E5%9D%91%E7%AC%94%E8%AE%B0/">js踩坑笔记</a>
           </li>
         
       </ul>
