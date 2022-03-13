@@ -4,18 +4,21 @@
   <meta charset="utf-8">
   
   
-  <title>Hello World | Finley&#39;s Blog</title>
+  <title>dart学习笔记（Iterable） | Finley&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="Iterable(可迭代类)Iterable^1是一个Collection，是一个抽象类，表示一组可以依次访问(access sequentially)的对象。 Iterable是一个CollectionCollection是一个对象，它表示一组对象（称之为元素）。Iterable是一种Collection。 常见的三种Collection  List Set,（不重复） Map（ Key-Val">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2022/03/13/hello-world/index.html">
+<meta property="og:title" content="dart学习笔记（Iterable）">
+<meta property="og:url" content="http://example.com/2021/09/21/dart%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88Iterable%EF%BC%89/index.html">
 <meta property="og:site_name" content="Finley&#39;s Blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="Iterable(可迭代类)Iterable^1是一个Collection，是一个抽象类，表示一组可以依次访问(access sequentially)的对象。 Iterable是一个CollectionCollection是一个对象，它表示一组对象（称之为元素）。Iterable是一种Collection。 常见的三种Collection  List Set,（不重复） Map（ Key-Val">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-03-13T03:08:47.592Z">
-<meta property="article:modified_time" content="2022-03-13T03:08:47.592Z">
+<meta property="article:published_time" content="2021-09-21T08:04:52.000Z">
+<meta property="article:modified_time" content="2022-03-13T02:59:00.262Z">
 <meta property="article:author" content="FinleyGe">
+<meta property="article:tag" content="编程">
+<meta property="article:tag" content="dart">
+<meta property="article:tag" content="学习笔记">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Finley's Blog" type="application/atom+xml">
@@ -73,12 +76,16 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-dart学习笔记（Iterable）" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2022/03/13/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2022-03-13T03:08:47.592Z" itemprop="datePublished">2022-03-13</time>
+    <a href="/2021/09/21/dart%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88Iterable%EF%BC%89/" class="article-date">
+  <time class="dt-published" datetime="2021-09-21T08:04:52.000Z" itemprop="datePublished">2021-09-21</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>►<a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>►<a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/dart/">dart</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -87,7 +94,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      Hello World
+      dart学习笔记（Iterable）
     </h1>
   
 
@@ -95,37 +102,57 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+        <h2 id="Iterable-可迭代类"><a href="#Iterable-可迭代类" class="headerlink" title="Iterable(可迭代类)"></a>Iterable(可迭代类)</h2><p><strong>Iterable</strong><a href="%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%E4%B8%AD%E7%9A%84%E7%BF%BB%E8%AF%91%E6%98%AF%E2%80%9C%E5%8F%AF%E8%BF%AD%E4%BB%A3%E9%9B%86%E5%90%88%E2%80%9D%EF%BC%8C%E4%BD%86%E7%A7%81%E4%BB%A5%E4%B8%BA%E8%BF%99%E7%A7%8D%E7%BF%BB%E8%AF%91%E6%98%AF%E4%B8%8D%E5%A6%A5%E5%BD%93%E7%9A%84%E3%80%82%E5%85%B6%E4%B8%80%EF%BC%8CIterable%E6%98%AF%E4%B8%80%E4%B8%AA%E6%8A%BD%E8%B1%A1%E7%B1%BB%EF%BC%8C%E7%BF%BB%E8%AF%91%E6%88%90%E2%80%9C%E9%9B%86%E5%90%88%E2%80%9D%E4%BC%9A%E8%AF%AF%E4%BB%A5%E4%B8%BA%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E5%8F%AF%E4%BB%A5%E5%AE%9E%E4%BE%8B%E5%8C%96%E7%9A%84%E7%B1%BB%E3%80%82%E5%85%B6%E4%BA%8C%EF%BC%8CIterable%E6%98%AF%E4%B8%80%E4%B8%AA%E5%BD%A2%E5%AE%B9%E8%AF%8D%E3%80%82%E6%89%80%E4%BB%A5%E6%9C%AC%E6%96%87%E4%B8%AD%E6%8A%8AIterable%E7%A7%B0%E4%B8%BA%E5%8F%AF%E8%BF%AD%E4%BB%A3%E7%B1%BB%E3%80%82">^1</a>是一个<strong>Collection</strong>，是一个抽象类，表示一组可以依次访问(access sequentially)的对象。</p>
+<h3 id="Iterable是一个Collection"><a href="#Iterable是一个Collection" class="headerlink" title="Iterable是一个Collection"></a>Iterable是一个Collection</h3><p>Collection是一个<strong>对象</strong>，它表示一组对象（称之为<strong>元素</strong>）。<br>Iterable是一种Collection。</p>
+<p>常见的三种Collection</p>
+<ol>
+<li>List</li>
+<li>Set,（不重复）</li>
+<li>Map（ Key-Value）</li>
+</ol>
+<h3 id="Iterable是一个抽象类"><a href="#Iterable是一个抽象类" class="headerlink" title="Iterable是一个抽象类"></a>Iterable是一个抽象类</h3><p>换言之，我们不能实例化Iterable，但是我们可以借由List和Set实现对Iterable的实例化。<br>List和Set派生自Iterable，而Map则不然。但是我们可以通过正确的使用Map的values（entries）从而以Iterable的方式读取Map。</p>
+<!-- ? 以什么方式呢？ -->
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h3 id="Iterable"><a href="#Iterable" class="headerlink" title="Iterable"></a>Iterable</h3><p>与List不同，用index访问Iterable并不保证是高效的。</p>
+<p>Iterable原生没有“[ ]”操作符，可以使用elementAt()。</p>
+<h3 id="访问Iterable"><a href="#访问Iterable" class="headerlink" title="访问Iterable"></a>访问Iterable</h3><h6 id="1-使用for-in循环"><a href="#1-使用for-in循环" class="headerlink" title="1. 使用for-in循环"></a>1. 使用for-in循环</h6><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> iterable = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> element <span class="keyword">in</span> iterable) &#123;</span><br><span class="line">    <span class="built_in">print</span>(element);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h6 id="2-使用first-和last"><a href="#2-使用first-和last" class="headerlink" title="2. 使用first 和last"></a>2. 使用first 和last</h6><p>类似C++，first是第一个元素，last是最后的元素。<br>注意：last需要访问前面的所有元素，所以在较大的iterable时，last可能是慢的。</p>
+<h6 id="3-使用firstWhere"><a href="#3-使用firstWhere" class="headerlink" title="3. 使用firstWhere"></a>3. 使用firstWhere</h6><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">String</span> element = iterable.firstWhere((element) =&gt; element.length &gt; <span class="number">5</span>);</span><br></pre></td></tr></table></figure>
+<p>firstWhere的参数是一个函数。<br>注意：<br>&#x3D;&gt;（箭头符）相当于return</p>
+<h3 id="检查元素"><a href="#检查元素" class="headerlink" title="检查元素"></a>检查元素</h3><p>any 和 every</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (items.any((item) =&gt; item.contains(<span class="string">&#x27;a&#x27;</span>))) &#123;</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;At least one item contains &quot;a&quot;&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (items.every((item) =&gt; item.length &gt;= <span class="number">5</span>)) &#123;</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;All items have length &gt;= 5&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
+<p>any： iterable中有一个元素符合条件<br>every： iterable中所有元素符合条件</p>
+<h3 id="过滤"><a href="#过滤" class="headerlink" title="过滤"></a>过滤</h3>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/03/13/hello-world/" data-id="cl0opdl6s0000oz0n0hpc2w6v" data-title="Hello World" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2021/09/21/dart%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88Iterable%EF%BC%89/" data-id="cl0opj92h0003ea0n1cwba64r" data-title="dart学习笔记（Iterable）" class="article-share-link">分享</a>
       
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dart/" rel="tag">dart</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">学习笔记</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag">编程</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
+    <a href="/2021/09/28/go%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          Golang 学习笔记
+        
+      </div>
+    </a>
   
-    <a href="/2021/11/29/ubuntu%E9%85%8D%E7%BD%AE%E5%AE%9E%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
+  
+    <a href="/2021/09/12/gRPC%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">后一篇</strong>
-      <div class="article-nav-title">ubuntu配置实记</div>
+      <div class="article-nav-title">gRPC踩坑记录</div>
     </a>
   
 </nav>
