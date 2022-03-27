@@ -3,9 +3,8 @@
 <head>
   <meta charset="utf-8">
   
-  
-  <title>目录: 习题解析 | Finley&#39;s Blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>category: 习题解析 | Finley&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="Finley&#39;s Blog">
 <meta property="og:url" content="http://example.com/categories/%E4%B9%A0%E9%A2%98%E8%A7%A3%E6%9E%90/index.html">
@@ -14,230 +13,233 @@
 <meta property="article:author" content="FinleyGe">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="Finley's Blog" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="Finley&#39;s Blog" type="application/atom+xml">
   
   
-    <link rel="shortcut icon" href="/favicon.png">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
   
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0.css">
+
+  
+<link rel="stylesheet" href="/lib/fancybox/dist/jquery.fancybox.min.css">
+
+  
+<link rel="stylesheet" href="/css/main.css">
+
+  
+<script src="/lib/jquery/dist/jquery.min.js"></script>
 
   
   
-<link rel="stylesheet" href="/css/style.css">
-
   
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-
   
 <meta name="generator" content="Hexo 6.1.0"></head>
-
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Finley&#39;s Blog</a>
-      </h1>
+  <div id="wrapper">
+    <header id="header" class="clearfix">
+	<a id="logo" href="/" title="Finley&#39;s Blog">Finley&#39;s Blog</a>
+	
+	<nav id="nav-menu" class="clearfix">
+		<form id="search" method="post" action="./" role="search">
+			<input id="search-input" type="text" name="s" class="inputbox" value="Search" onfocus="if (value =='Search'){value =''}" onblur="if (value ==''){value='Search'}">
+		</form>
+		<ul>
       
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
+				
+        <li><a class="main-nav-link" href="/">Home</a></li>
+      
+				
+        <li><a class="main-nav-link" href="/archives">Archives</a></li>
+      
+		</ul>
+	</nav>
 </header>
+    <section id="main" class="clearfix">
+  <article class="post-detail">
+    <h1 class="post-title"><a href="/">python习题解析02</a></h1>
+    <ul class="post-meta">
+  <li><i class="fa fa-user"></i> Author FinleyGe</li>
+  <li><i class="fa fa-calendar"></i> Date 10月 31</li>
+  <li><i class="fa fa-folder"></i> Categories
+  
+    <a class="article-category-link" href="/categories/%E4%B9%A0%E9%A2%98%E8%A7%A3%E6%9E%90/">习题解析</a>
+  
+  </li>
+</ul>
+    <div class="post-content">
+      <h1 id="Python-习题解析-02"><a href="#Python-习题解析-02" class="headerlink" title="Python 习题解析 02"></a>Python 习题解析 02</h1><p>解析第三次上机作业</p>
+<h2 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">aDict = &#123;</span><br><span class="line">        <span class="string">&#x27;张三&#x27;</span>: <span class="number">76</span>,</span><br><span class="line">        <span class="string">&#x27;李四&#x27;</span>: <span class="number">45</span>,</span><br><span class="line">        <span class="string">&#x27;王五&#x27;</span>: <span class="number">83</span>,</span><br><span class="line">        <span class="string">&#x27;赵六&#x27;</span>: <span class="number">66</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Task A</span></span><br><span class="line">d = &#123;</span><br><span class="line">        <span class="string">&#x27;钱七&#x27;</span>: <span class="number">90</span>,</span><br><span class="line">        <span class="string">&#x27;郑八&#x27;</span>: <span class="number">91</span>,</span><br><span class="line">&#125;</span><br><span class="line">aDict.update(d)</span><br><span class="line"><span class="built_in">print</span>(aDict)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Task B</span></span><br><span class="line">aDict[<span class="string">&#x27;李四&#x27;</span>] = <span class="number">60</span></span><br><span class="line"><span class="built_in">print</span>(aDict)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Task C</span></span><br><span class="line">aDict.pop(<span class="string">&#x27;赵六&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(aDict)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Task D</span></span><br><span class="line"><span class="built_in">print</span>(aDict.keys())</span><br><span class="line"></span><br><span class="line"><span class="comment"># Task E</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> aDict.items():</span><br><span class="line">    aDict[i[<span class="number">0</span>]] += <span class="number">5</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(aDict)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Task F</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">sorted</span>(aDict.items(), key = <span class="keyword">lambda</span> kv : (kv[<span class="number">1</span>], kv[<span class="number">0</span>])))</span><br><span class="line"><span class="comment"># print(sorted(aDict.items()))</span></span><br><span class="line"><span class="comment"># sorted(aDict.values())</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Task G</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> aDict.items():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;&#123;0&#125;-&#123;1&#125;&#x27;</span>.<span class="built_in">format</span>(i[<span class="number">0</span>], i[<span class="number">1</span>]))</span><br><span class="line">   </span><br></pre></td></tr></table></figure>
 
-      <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/10/31/python%E4%B9%A0%E9%A2%98%E8%A7%A3%E6%9E%9002/" class="archive-article-date">
-  <time class="dt-published" datetime="2021-10-31T10:45:18.000Z" itemprop="datePublished">10月 31</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/10/31/python%E4%B9%A0%E9%A2%98%E8%A7%A3%E6%9E%9002/">python习题解析02</a>
-    </h1>
-  
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/10/30/python%E4%B9%A0%E9%A2%98%E8%A7%A3%E6%9E%9001/" class="archive-article-date">
-  <time class="dt-published" datetime="2021-10-30T15:48:24.000Z" itemprop="datePublished">10月 30</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/10/30/python%E4%B9%A0%E9%A2%98%E8%A7%A3%E6%9E%9001/">python习题解析01</a>
-    </h1>
-  
+<h2 id="第二题"><a href="#第二题" class="headerlink" title="第二题"></a>第二题</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">####### CODE</span></span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line">l = <span class="built_in">list</span>(random.randint(<span class="number">0</span>, <span class="number">10</span>) <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">100</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;raw list:&#x27;</span>, l)</span><br><span class="line">d = <span class="built_in">dict</span>()</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> l:</span><br><span class="line">    i = <span class="built_in">str</span>(i)</span><br><span class="line">    <span class="keyword">if</span> i <span class="keyword">in</span> d.keys():</span><br><span class="line">        d[i] += <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        d[i] = <span class="number">1</span></span><br><span class="line"></span><br><span class="line">sorted_dict = <span class="built_in">sorted</span>(d.items(), key = <span class="keyword">lambda</span> kv : (kv[<span class="number">1</span>], kv[<span class="number">0</span>]))</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;Result(sorted): &#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> sorted_dict:</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure>
 
-    </header>
-  </div>
-</article>
+<h2 id="第三题"><a href="#第三题" class="headerlink" title="第三题"></a>第三题</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">###### CODE</span></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    i = <span class="built_in">input</span>(<span class="string">&#x27;输入代码(直接回车以结束):&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> i == <span class="string">&#x27;3&#x27;</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;老板&#x27;</span>)</span><br><span class="line">    <span class="keyword">elif</span> i == <span class="string">&#x27;2&#x27;</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;用户&#x27;</span>)</span><br><span class="line">    <span class="keyword">elif</span> i == <span class="string">&#x27;1&#x27;</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;员工&#x27;</span>)</span><br><span class="line">    <span class="keyword">elif</span> i == <span class="string">&#x27;&#x27;</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;bye!&#x27;</span>)</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;错误类型&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>还有一种讨巧的办法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">d = &#123;<span class="number">3</span> : <span class="string">&#x27;老板&#x27;</span>, <span class="number">2</span>: <span class="string">&#x27;员工&#x27;</span>, <span class="number">1</span>: <span class="string">&#x27;用户&#x27;</span>&#125;</span><br><span class="line"><span class="built_in">print</span>(d.get(<span class="built_in">int</span>(<span class="built_in">input</span>()), <span class="string">&#x27;错误类型&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+<h2 id="第四题"><a href="#第四题" class="headerlink" title="第四题"></a>第四题</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">####### CODE</span></span><br><span class="line">i = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;月利润:&#x27;</span>))</span><br><span class="line">o = <span class="number">0</span></span><br><span class="line"><span class="keyword">if</span> i &lt;= <span class="number">1e5</span>:</span><br><span class="line">    o = i * <span class="number">0.05</span></span><br><span class="line"><span class="keyword">elif</span> <span class="number">1e5</span> &lt;= i &lt;= <span class="number">2e5</span>:</span><br><span class="line">    o = i * <span class="number">0.075</span></span><br><span class="line"><span class="keyword">elif</span> i &gt;= <span class="number">2e5</span>:</span><br><span class="line">    o = i * <span class="number">0.1</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;奖金: &#x27;</span>, o)</span><br></pre></td></tr></table></figure>
+
+    </div>
+  </article>
+
+  <article class="post-detail">
+    <h1 class="post-title"><a href="/">python习题解析01</a></h1>
+    <ul class="post-meta">
+  <li><i class="fa fa-user"></i> Author FinleyGe</li>
+  <li><i class="fa fa-calendar"></i> Date 10月 30</li>
+  <li><i class="fa fa-folder"></i> Categories
   
+    <a class="article-category-link" href="/categories/%E4%B9%A0%E9%A2%98%E8%A7%A3%E6%9E%90/">习题解析</a>
   
-    </div></section>
-  
+  </li>
+</ul>
+    <div class="post-content">
+      <h1 id="Python习题解析-01"><a href="#Python习题解析-01" class="headerlink" title="Python习题解析 01"></a>Python习题解析 01</h1><h2 id="写作缘由"><a href="#写作缘由" class="headerlink" title="写作缘由"></a>写作缘由</h2><p>由于<em>懂得都懂</em>的原因，我们的Python课上的并不尽人意。为了尽作为一个课代表的职责，我决定撰写此系列文章。一方面来说，作为自己对于Python知识的查漏补缺；更多的是为了服务大家。</p>
+<h2 id="第一次书面作业-习题解析"><a href="#第一次书面作业-习题解析" class="headerlink" title="第一次书面作业 习题解析"></a>第一次书面作业 习题解析</h2><h4 id="1题"><a href="#1题" class="headerlink" title="1题"></a>1题</h4><p>略</p>
+<h4 id="2题"><a href="#2题" class="headerlink" title="2题"></a>2题</h4><p>None 表示 <strong>空</strong></p>
+<h5 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h5><ul>
+<li>None 是一个特殊的对象，表示空。通过type函数可以发现，None是一个NoneType类型。<blockquote>
+<p><strong>对象</strong> (Object)对于Python而言，<em>万物皆对象</em>。一个字符串，一个变量，一个函数，都是对象。对象是构成一个Python程序的基本元素。</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p><strong>类型</strong> (Type) 每个对象都有一个类型。所以请牢记：<strong>一个数据，不只是它的值，还有它的类型</strong>。例如：”1”和1是不同的，前者是str类型，后者是int类型。</p>
+</blockquote>
+<ul>
+<li>None 和 “” 以及 [] 是不同的。</li>
+</ul>
+<h4 id="3题"><a href="#3题" class="headerlink" title="3题"></a>3题</h4><p>结果分别是 True 和 False</p>
+<h5 id="解释-1"><a href="#解释-1" class="headerlink" title="解释"></a>解释</h5><p>isinstance()函数需要传入两个参数<br>第一个参数是一个值<br>第二个参数是一个类型</p>
+<blockquote>
+<p><strong>函数</strong> 例如 isinstance() 就是一个<em>内置</em>函数，coder也可以自定义函数。函数由三大部分组成，即<br>    1. 参数列表<br>    2. 函数体<br>    3. 返回值<br>以isinstance()为例，它的参数列表即为一个值和一个类型，它的函数体是预先定义好的，而返回值是一个布尔值。</p>
+</blockquote>
+<h4 id="4题"><a href="#4题" class="headerlink" title="4题"></a>4题</h4><p>a &#x3D; 27<br>b &#x3D; 36</p>
+<h5 id="解释-2"><a href="#解释-2" class="headerlink" title="解释"></a>解释</h5><p>&#x3D; 是赋值运算符，将&#x3D;右边的值赋予左边的变量。</p>
+<blockquote>
+<p>注意，需要和相等运算符(&#x3D;&#x3D;)区别。相等运算符可以理解为一个函数，参数即为符号两侧的值，返回的是布尔型。而赋值运算符如果理解为函数，是没有返回值的。</p>
+</blockquote>
+<p>** 是乘方运算符</p>
+<p>*&#x3D; 是相乘赋值运算符，其作用相当于：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a *= b</span><br><span class="line"><span class="comment"># 相当于：</span></span><br><span class="line">a = a * b </span><br></pre></td></tr></table></figure>
+
+<h4 id="5题"><a href="#5题" class="headerlink" title="5题"></a>5题</h4><p>内存地址</p>
+<h6 id="拓展性解释"><a href="#拓展性解释" class="headerlink" title="拓展性解释"></a>拓展性解释</h6><p>id函数实际上返回的是对象的唯一标识符，这一符号保证在程序的生命周期（可以理解为在一次运行内）内，是唯一的。<br>对于Cpython解释器，这个返回值的确是该对象的内存地址，但是其他解释器不保证。</p>
+<h4 id="6题"><a href="#6题" class="headerlink" title="6题"></a>6题</h4><p>2.718</p>
+<h5 id="解释-3"><a href="#解释-3" class="headerlink" title="解释"></a>解释</h5><p>271.8E-2可以理解为$271.8 \times 10^{-2}$.</p>
+<h4 id="7题"><a href="#7题" class="headerlink" title="7题"></a>7题</h4><p>a的值是”123”</p>
+<h5 id="解释-4"><a href="#解释-4" class="headerlink" title="解释"></a>解释</h5><p>有的同学会认为是“123456”，这是因为没有理解+运算符。<br>+运算符不会改变原先变量的值。</p>
+<h6 id="其他思考"><a href="#其他思考" class="headerlink" title="其他思考"></a>其他思考</h6><p>这道题考的可能不是这个点。<br>print函数输出是”123456”，可能此题考的是字符串的拼接。</p>
+<p>也有可能考的是类型。注意：a变量的类型是str，加以“456”得到的只能是“123456”，而不是579。</p>
+<h4 id="8题"><a href="#8题" class="headerlink" title="8题"></a>8题</h4><p>0.5 -1 4</p>
+<h5 id="解释-5"><a href="#解释-5" class="headerlink" title="解释"></a>解释</h5><p>&#x2F;即除法，需要注意，python自动将int类型转化为float类型（这也称为隐式类型转换）运算，输出的也是float类型。<br>&#x2F;&#x2F;即整除（也叫地板除），即使用“去尾法”将小数部分去除。返回的类型是int。<br>%即取模运算，也叫取余运算。</p>
+<h4 id="9题"><a href="#9题" class="headerlink" title="9题"></a>9题</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sum</span>(<span class="built_in">range</span>(<span class="number">1</span>, <span class="number">101</span>))</span><br></pre></td></tr></table></figure>
+
+<h5 id="解释-6"><a href="#解释-6" class="headerlink" title="解释"></a>解释</h5><p>sum函数传入一个列表，输出该列表的求和<br>range函数传入两个参数，第一个是区间左端点，第二个是右端点，注意：可以理解这个区间是左闭右开的。</p>
+<h6 id="拓展性解释-1"><a href="#拓展性解释-1" class="headerlink" title="拓展性解释"></a>拓展性解释</h6><ol>
+<li><p>sum函数传入的是一个可迭代对象。既可以是一个列表，也可以是一个“迭代器”。<br>sum函数可以传入第二个参数“start”，该参数默认为0。sum函数返回的是start和传入列表的和。<br>注意：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sum</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<p>会报错，为什么？<br>因为这样python会误以为给sum传入三个参数。而正确的做法应该是:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sum</span>((<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>))</span><br></pre></td></tr></table></figure>
+<p>这相当于传入一个tuple（元组）作为参数。</p>
+</li>
+<li><p>range函数有三个参数。分别是start，stop， step。start是区间左端点，stop是右端点，step是“步长”，也就是间隔几个数字。默认情况下，start为0， step为1。 </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">10</span>, <span class="number">5</span>):</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure>
+<p>输出为</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1</span><br><span class="line">6</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>range函数返回的是一个range对象。其本质是一个迭代器。细心的同学可能发现</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="built_in">range</span>(<span class="number">1</span>, <span class="number">10</span>))</span><br></pre></td></tr></table></figure>
+<p>输出为</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">range(1, 10)</span><br></pre></td></tr></table></figure>
+<p>而不是</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 2 3 4 5 6 7 8 9</span><br></pre></td></tr></table></figure>
+<p>(或是其他的什么形式)</p>
+</li>
+</ol>
+<p>如果要访问这个迭代器，必须使用迭代器对应的操作。for-in循环就是访问迭代器的一个操作</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>):</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure>
+
+<p>其中定义的变量i在循环中可以理解为迭代器的每一个节点（对应的值）</p>
+<blockquote>
+<p><strong>迭代器</strong>被称为Python三大器之一（其余两个是装饰器和生成器）。迭代器是一个对象，它存放的并不是整个序列，而是整个序列中的某一个元素，以及另一个（几个）元素的地址。这样做的目的是什么呢？显然，这样做内存占用率更低。存储一个1到100的列表所占空间一定比一个range对象空间大。这是一种通过牺牲运算性能换取存储空间的思想。</p>
+</blockquote>
+<h4 id="10题"><a href="#10题" class="headerlink" title="10题"></a>10题</h4><p>120</p>
+<h5 id="解释-7"><a href="#解释-7" class="headerlink" title="解释"></a>解释</h5><p>eval函数（单词：evaluate）传入一个str作为参数。python将把该参数视为一条python语句而执行。在我们应试的情景中，它的功能相当强大。<br>例如需求输入一个列表（用,分割）<br>正常的操作是:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="built_in">list</span>(<span class="built_in">map</span>(<span class="built_in">int</span>, <span class="built_in">input</span>().split(<span class="string">&#x27;,&#x27;</span>)))</span><br></pre></td></tr></table></figure>
+<p>而应用eval函数，可以简化为</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="built_in">list</span>(<span class="built_in">eval</span>(<span class="built_in">input</span>()))</span><br></pre></td></tr></table></figure>
+<p><em>(list函数将输入显式转换为列表，因为不加括号的以逗号分割的序列，python认为是一个元组。如果输入的格式是<code>[1,2,3]</code>这样，list函数可以不加。)</em></p>
+<h6 id="拓展性解释-2"><a href="#拓展性解释-2" class="headerlink" title="拓展性解释"></a>拓展性解释</h6><p>eval函数是一个经典而危险的函数。它反映出了Python作为解释性语言的特性，也反映出了漏洞。Hackers可以通过该函数，通过字符串来运行指令，包括但不限于操作数据库，操作系统文件等。</p>
+<blockquote>
+<p>通过字符串来执行指令，这种操作也可以不那么危险。这种方式称之为“反射”。但使用的一定不会是eval函数。</p>
+</blockquote>
+<h4 id="11题"><a href="#11题" class="headerlink" title="11题"></a>11题</h4><p>22</p>
+<p>#####解释<br>len函数返回的是一个可迭代对象（字符串，列表）的长度。</p>
+<h6 id="其他的思考"><a href="#其他的思考" class="headerlink" title="其他的思考"></a>其他的思考</h6><p>有没有可能是23？因为按照中英文混杂排版的习惯，英文单词和中文之间应当敲以空格，空格对于字符串而言也是一个空间的占用。而从题目所给的信息，无法判断中间是否有空格。</p>
+<p>另一方面是 Word 在排版的时候，会自动<em>显示</em>中文和英文之间的空格。（并不是自动添加）</p>
+<h4 id="12题"><a href="#12题" class="headerlink" title="12题"></a>12题</h4><p>12<br>18<br>10<br>类型都是int</p>
+<h5 id="解释-8"><a href="#解释-8" class="headerlink" title="解释"></a>解释</h5><p>数字的表示，如果没有前缀，那么默认该数是以十进制表示。</p>
+<p>如果前缀是 0x 那么 就是 16 进制。如果是 0o 那么是8进制。如果是 0b 那么是 2 进制</p>
+<h4 id="13题"><a href="#13题" class="headerlink" title="13题"></a>13题</h4><p>32<br>10.125</p>
+<h5 id="解释-9"><a href="#解释-9" class="headerlink" title="解释"></a>解释</h5><p>python的数学计算顺序完全符合数学计算顺序（听起来是一句废话，但是有些语言（例如C&#x2F;C++）就不是这样）</p>
+<h4 id="14题"><a href="#14题" class="headerlink" title="14题"></a>14题</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x = (<span class="number">2</span> ** <span class="number">4</span> + <span class="number">7</span> - <span class="number">3</span> * <span class="number">4</span>) / <span class="number">5</span></span><br><span class="line"><span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure>
+<p>输出<code>2.2</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">1</span> + <span class="number">3</span> ** <span class="number">2</span> * (<span class="number">16</span> % <span class="number">7</span>) / <span class="number">7</span></span><br><span class="line"><span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure>
+
+<p>输出<code>3.5714285714285716</code></p>
+<h4 id="15题"><a href="#15题" class="headerlink" title="15题"></a>15题</h4><p><code>[1, 3, 5, 7, 9]</code><br><code>123</code><br><code>123.0</code><br><code>&#39;123&#39;</code></p>
+<h4 id="16题"><a href="#16题" class="headerlink" title="16题"></a>16题</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="built_in">print</span>(random.randint(<span class="number">10</span>, <span class="number">99</span>))</span><br><span class="line"><span class="comment"># 或者是:</span></span><br><span class="line"><span class="built_in">print</span>(random.randrange(<span class="number">10</span>, <span class="number">100</span>))</span><br></pre></td></tr></table></figure>
+
+<h5 id="解释-10"><a href="#解释-10" class="headerlink" title="解释"></a>解释</h5><p><code>import</code>语句为导入库（包）。一个库，是python官方或第三方写好的一个文件。用户通过导入，可以直接使用库中的函数（类、对象等）。</p>
+<p>random库包含了数个随机性函数。<br>randint函数就是返回一个随机整数。注意：它的两个参数和range函数的不一样，它的两个端点都是可以取的。<br>randrange函数和range函数的取值就一样了。从上述的答案中可见一斑。</p>
+<h4 id="17题"><a href="#17题" class="headerlink" title="17题"></a>17题</h4><p>6</p>
+<p>-2</p>
+<p>3</p>
+<p>0</p>
+<h5 id="解释-11"><a href="#解释-11" class="headerlink" title="解释"></a>解释</h5><p>and运算符被称为逻辑与运算符。对于<code>x and y</code>，如果x是False 那么返回x的值，否则返回y的值。<br>例如 4 and 6 。4不是False，所以返回6，而 0 and -1， 0 是False，那么返回-1</p>
+<p>or 运算符被称为逻辑或运算符。对于<code>x or y</code>, 如果 x 是 True 那么返回 x的值，否则返回y的值。</p>
+<p>Python 中 0 是False，非0是True</p>
+<h4 id="18题"><a href="#18题" class="headerlink" title="18题"></a>18题</h4><p>a &#x3D; 1.0<br>b &#x3D; 2.0<br>sita &#x3D; 10.0</p>
+<p>输出<code>[&#39;0&#39;,&#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;]</code></p>
+<h5 id="解释-12"><a href="#解释-12" class="headerlink" title="解释"></a>解释</h5><p>map函数，即映射。需要传入两个参数，第一个参数是一个函数，第二个参数是一个可迭代对象。该函数将把第二个参数中的每一个元素作为参数，调用第一个参数传入的函数中，将该函数的返回值返回（实际上，map函数返回的也是一个map对象。）</p>
+<p>例如第一问，float函数是显式转换为float类型。可迭代对象是一个列表。map函数将列表中的每一项用float函数调用。返回的是一个map对象，再隐式转换为元组，给三个变量赋值。<br>第二问类似。</p>
+<h4 id="19题"><a href="#19题" class="headerlink" title="19题"></a>19题</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line"></span><br><span class="line">a, b, sita = <span class="built_in">map</span>(<span class="built_in">float</span>, <span class="built_in">input</span>().split(<span class="string">&#x27;,&#x27;</span>))</span><br><span class="line">c = math.sqrt(a * a + b * b - <span class="number">2</span> * a * b * math.cos(math.radians(sita)))</span><br><span class="line"><span class="built_in">print</span>(c)</span><br></pre></td></tr></table></figure>
+
+<h5 id="解释-13"><a href="#解释-13" class="headerlink" title="解释"></a>解释</h5><p>导入了math包。<br>sqrt函数开平方，cos函数算余弦，radians将角度转换为弧度。<br>input函数传入一个参数（也可以不传，这个参数只是作为提示）返回的是一个字符串。必须对字符串处理为一定的类型才能使用。</p>
+<p>split是字符串的一个方法，传入一个字符串参数。该方法将字符串以参数分割，返回一个列表。该参数默认为空格。</p>
+<blockquote>
+<p><strong>方法</strong> 类似于函数。不过这个函数是某一个对象的函数，一般称之为方法。 </p>
+</blockquote>
+<h4 id="20题"><a href="#20题" class="headerlink" title="20题"></a>20题</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line"></span><br><span class="line">x1, y1, x2, y2 = <span class="built_in">map</span>(<span class="built_in">float</span>, <span class="built_in">input</span>().split())</span><br><span class="line"><span class="built_in">print</span>(math.sqrt((x2 - x1) ** <span class="number">2</span> + (y2 - y1) ** <span class="number">2</span>))</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>1.菜鸟教程 <a target="_blank" rel="noopener" href="https://www.runoob.com/python3/python3-tutorial.html">https://www.runoob.com/python3/python3-tutorial.html</a></p>
+
+    </div>
+  </article>
 
 
 </section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">分类</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">linux</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/linux/%E8%AE%B0%E5%BD%95/">记录</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%B9%A0%E9%A2%98%E8%A7%A3%E6%9E%90/">习题解析</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/%E5%89%8D%E7%AB%AF/">前端</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/dart/">dart</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/%E6%A1%86%E6%9E%B6/">框架</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/">踩坑记录</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%8B%B1%E8%AF%AD/">英语</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%8B%B1%E8%AF%AD/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CPP/" rel="tag">CPP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WEB/" rel="tag">WEB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dart/" rel="tag">dart</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gRPC%E6%A1%86%E6%9E%B6/" rel="tag">gRPC框架</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/golang/" rel="tag">golang</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B9%A0%E9%A2%98%E8%A7%A3%E6%9E%90/" rel="tag">习题解析</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%93%B2%E5%AD%A6/" rel="tag">哲学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A7%E5%AD%A6/" rel="tag">大学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">学习笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%80%BB%E7%BB%93/" rel="tag">总结</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/" rel="tag">持续更新</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%94%9F%E6%B4%BB/" rel="tag">生活</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag">笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BB%8F%E5%85%B8/" rel="tag">经典</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag">编程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%8B%B1%E8%AF%AD/" rel="tag">英语</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" rel="tag">读书笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%B8%A9%E5%9D%91%E7%AC%94%E8%AE%B0/" rel="tag">踩坑笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/" rel="tag">踩坑记录</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%80%BB%E8%BE%91%E5%AD%A6/" rel="tag">逻辑学</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签云</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/CPP/" style="font-size: 10px;">CPP</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/WEB/" style="font-size: 10px;">WEB</a> <a href="/tags/dart/" style="font-size: 10px;">dart</a> <a href="/tags/gRPC%E6%A1%86%E6%9E%B6/" style="font-size: 13.33px;">gRPC框架</a> <a href="/tags/golang/" style="font-size: 10px;">golang</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/%E4%B9%A0%E9%A2%98%E8%A7%A3%E6%9E%90/" style="font-size: 13.33px;">习题解析</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 10px;">前端</a> <a href="/tags/%E5%93%B2%E5%AD%A6/" style="font-size: 10px;">哲学</a> <a href="/tags/%E5%A4%A7%E5%AD%A6/" style="font-size: 10px;">大学</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 16.67px;">学习笔记</a> <a href="/tags/%E6%80%BB%E7%BB%93/" style="font-size: 10px;">总结</a> <a href="/tags/%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/" style="font-size: 13.33px;">持续更新</a> <a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 10px;">生活</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 13.33px;">笔记</a> <a href="/tags/%E7%BB%8F%E5%85%B8/" style="font-size: 10px;">经典</a> <a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 20px;">编程</a> <a href="/tags/%E8%8B%B1%E8%AF%AD/" style="font-size: 10px;">英语</a> <a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" style="font-size: 13.33px;">读书笔记</a> <a href="/tags/%E8%B8%A9%E5%9D%91%E7%AC%94%E8%AE%B0/" style="font-size: 10px;">踩坑笔记</a> <a href="/tags/%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/" style="font-size: 10px;">踩坑记录</a> <a href="/tags/%E9%80%BB%E8%BE%91%E5%AD%A6/" style="font-size: 10px;">逻辑学</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">十一月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">九月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">八月 2021</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2021/11/29/ubuntu%E9%85%8D%E7%BD%AE%E5%AE%9E%E8%AE%B0/">ubuntu配置实记</a>
-          </li>
-        
-          <li>
-            <a href="/2021/10/31/python%E4%B9%A0%E9%A2%98%E8%A7%A3%E6%9E%9002/">python习题解析02</a>
-          </li>
-        
-          <li>
-            <a href="/2021/10/30/python%E4%B9%A0%E9%A2%98%E8%A7%A3%E6%9E%9001/">python习题解析01</a>
-          </li>
-        
-          <li>
-            <a href="/2021/10/23/Cpp%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/">Cpp踩坑记录</a>
-          </li>
-        
-          <li>
-            <a href="/2021/10/23/js%E8%B8%A9%E5%9D%91%E7%AC%94%E8%AE%B0/">js踩坑笔记</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2022 FinleyGe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/js/jquery-3.4.1.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
+    <footer id="footer" role="contentinfo">
+    <div>&copy; 2022 <a href="/">Finley&#39;s Blog</a>.
+    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Designed by <a href="http://rainylog.com" target="_blank">Rainy.</a>
+	</div>
+</footer><!-- end #footer -->
 
   </div>
+  
+<script src="/lib/fancybox/dist/jquery.fancybox.min.js"></script>
+
+
+  
+<script src="/js/helper.js"></script>
+
+  
+<script src="/js/_third-party/gitment.js"></script>
+
 </body>
 </html>
