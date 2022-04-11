@@ -1,16 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  
-  <title>gRPC框架 | Finley&#39;s Blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="什么是RPC框架？RPC框架，即Remote Procedure Call（远程过程调用），是一个计算机通信协议。该协议允许计算机远程调用另一台计算机上的程序，实现Server&#x2F;Client模式。 什么是gRPC框架？gRPC框架的官方文档：https:&#x2F;&#x2F;grpc.io&#x2F;gRPC框架是Google开发的一款开源的、高性能的、通用的面向HTTP&#x2F;2的RPC框架。 为什么是通用的">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="什么是RPC框架？RPC框架，即Remote Procedure Call（远程过程调用），是一个计算机通信协议。该协议允许计算机远程调用另一台计算机上的程序，实现Server&#x2F;Client模式。 什么是gRPC框架？gRPC框架的官方文档：https:&#x2F;&#x2F;grpc.io&#x2F;gRPC框架是Google开发的一款开源的、高性能的、通用的面向HTTP&#x2F;2的RPC框架。 为什么是通用的？gRPC可以实现多">
 <meta property="og:type" content="article">
 <meta property="og:title" content="gRPC框架">
 <meta property="og:url" content="http://example.com/2021/09/09/gRPC%E6%A1%86%E6%9E%B6/index.html">
 <meta property="og:site_name" content="Finley&#39;s Blog">
-<meta property="og:description" content="什么是RPC框架？RPC框架，即Remote Procedure Call（远程过程调用），是一个计算机通信协议。该协议允许计算机远程调用另一台计算机上的程序，实现Server&#x2F;Client模式。 什么是gRPC框架？gRPC框架的官方文档：https:&#x2F;&#x2F;grpc.io&#x2F;gRPC框架是Google开发的一款开源的、高性能的、通用的面向HTTP&#x2F;2的RPC框架。 为什么是通用的">
+<meta property="og:description" content="什么是RPC框架？RPC框架，即Remote Procedure Call（远程过程调用），是一个计算机通信协议。该协议允许计算机远程调用另一台计算机上的程序，实现Server&#x2F;Client模式。 什么是gRPC框架？gRPC框架的官方文档：https:&#x2F;&#x2F;grpc.io&#x2F;gRPC框架是Google开发的一款开源的、高性能的、通用的面向HTTP&#x2F;2的RPC框架。 为什么是通用的？gRPC可以实现多">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-09-09T11:12:14.000Z">
 <meta property="article:modified_time" content="2022-03-13T02:59:00.262Z">
@@ -19,111 +34,455 @@
 <meta property="article:tag" content="学习笔记">
 <meta property="article:tag" content="gRPC框架">
 <meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Finley&#39;s Blog" type="application/atom+xml">
-  
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0.css">
 
-  
-<link rel="stylesheet" href="/lib/fancybox/dist/jquery.fancybox.min.css">
+<link rel="canonical" href="http://example.com/2021/09/09/gRPC%E6%A1%86%E6%9E%B6/">
 
-  
-<link rel="stylesheet" href="/css/main.css">
 
-  
-<script src="/lib/jquery/dist/jquery.min.js"></script>
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
 
+  <title>gRPC框架 | Finley's Blog</title>
   
-  
-  
-  
-<meta name="generator" content="Hexo 6.1.0"></head>
-<body>
-  <div id="wrapper">
-    <header id="header" class="clearfix">
-	<a id="logo" href="/" title="Finley&#39;s Blog">Finley&#39;s Blog</a>
-	
-	<nav id="nav-menu" class="clearfix">
-		<form id="search" method="post" action="./" role="search">
-			<input id="search-input" type="text" name="s" class="inputbox" value="Search" onfocus="if (value =='Search'){value =''}" onblur="if (value ==''){value='Search'}">
-		</form>
-		<ul>
-      
-				
-        <li><a class="main-nav-link" href="/">Home</a></li>
-      
-				
-        <li><a class="main-nav-link" href="/archives">Archives</a></li>
-      
-		</ul>
-	</nav>
-</header>
-    <section id="main" class="clearfix"><article class="post-detail">
-  <h1 class="post-title"><a href="/">gRPC框架</a></h1>
-  <ul class="post-meta">
-  <li><i class="fa fa-user"></i> Author FinleyGe</li>
-  <li><i class="fa fa-calendar"></i> Date 9月 9</li>
-  <li><i class="fa fa-folder"></i> Categories
-  
-    <a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a> <i class="fa fa-caret-right"></i> <a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B/%E6%A1%86%E6%9E%B6/">框架</a>
-  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Finley's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
   </li>
-</ul>
-  <div class="post-content">
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/09/gRPC%E6%A1%86%E6%9E%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="FinleyGe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Finley's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          gRPC框架
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-09-09 19:12:14" itemprop="dateCreated datePublished" datetime="2021-09-09T19:12:14+08:00">2021-09-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-03-13 10:59:00" itemprop="dateModified" datetime="2022-03-13T10:59:00+08:00">2022-03-13</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%BC%96%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">编程</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%BC%96%E7%A8%8B/%E6%A1%86%E6%9E%B6/" itemprop="url" rel="index"><span itemprop="name">框架</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-      <h1 id="什么是RPC框架？"><a href="#什么是RPC框架？" class="headerlink" title="什么是RPC框架？"></a>什么是RPC框架？</h1><p><strong>RPC</strong>框架，即<strong>Remote Procedure Call</strong>（远程过程调用），是一个<strong>计算机通信协议</strong>。<br>该协议允许计算机远程调用另一台计算机上的程序，实现Server&#x2F;Client模式。</p>
-<h1 id="什么是gRPC框架？"><a href="#什么是gRPC框架？" class="headerlink" title="什么是gRPC框架？"></a>什么是gRPC框架？</h1><p>gRPC框架的官方文档：<a target="_blank" rel="noopener" href="https://grpc.io/">https://grpc.io/</a><br>gRPC框架是Google开发的一款开源的、高性能的、<strong>通用</strong>的面向HTTP&#x2F;2的RPC框架。</p>
+        <h1 id="什么是RPC框架？"><a href="#什么是RPC框架？" class="headerlink" title="什么是RPC框架？"></a>什么是RPC框架？</h1><p><strong>RPC</strong>框架，即<strong>Remote Procedure Call</strong>（远程过程调用），是一个<strong>计算机通信协议</strong>。<br>该协议允许计算机远程调用另一台计算机上的程序，实现Server/Client模式。</p>
+<h1 id="什么是gRPC框架？"><a href="#什么是gRPC框架？" class="headerlink" title="什么是gRPC框架？"></a>什么是gRPC框架？</h1><p>gRPC框架的官方文档：<a target="_blank" rel="noopener" href="https://grpc.io/">https://grpc.io/</a><br>gRPC框架是Google开发的一款开源的、高性能的、<strong>通用</strong>的面向HTTP/2的RPC框架。</p>
 <h2 id="为什么是通用的？"><a href="#为什么是通用的？" class="headerlink" title="为什么是通用的？"></a>为什么是通用的？</h2><p>gRPC可以实现多语言端的通信。包括但不限于Golang, Python, Dart等。</p>
 <p>gRPC框架使用<strong>protocol buffers</strong>作为其<strong>IDL</strong>语言。<br><strong>IDL</strong>: Interface Description Language ,接口定义语言。</p>
 <p>简单说来，通过protocol buffers描述定义各种接口和各种数据结构，再通过<strong>编译器</strong>（<strong>Protoc</strong>）自动化实现各个语言版本。<br>当然这种实现仅仅是提供一个框架，而要实现其功能，还需要实际上填充代码。</p>
-<h2 id="如何使用gRPC框架"><a href="#如何使用gRPC框架" class="headerlink" title="如何使用gRPC框架"></a>如何使用gRPC框架</h2><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>此处略去，可以参考官方文档[^1]。</p>
+<h2 id="如何使用gRPC框架"><a href="#如何使用gRPC框架" class="headerlink" title="如何使用gRPC框架"></a>如何使用gRPC框架</h2><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>此处略去，可以参考官方文档<sup><a href="#fn_1" id="reffn_1">1</a></sup>。</p>
 <h3 id="写Protocol-Buffers"><a href="#写Protocol-Buffers" class="headerlink" title="写Protocol Buffers"></a>写Protocol Buffers</h3><p>Protocol Buffers的文件后缀是 <strong>.proto</strong>。<br>Protocol Buffers是一款灵活的(Flexible)，高效的(Effcient)，自动化(Automated)的接口定义语言。</p>
-<h4 id="定义服务"><a href="#定义服务" class="headerlink" title="定义服务"></a>定义服务</h4><p>通过一下语句可以定义一个服务。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">service ServiceName &#123;</span><br><span class="line">    // something...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="定义方法"><a href="#定义方法" class="headerlink" title="定义方法"></a>定义方法</h4><p>通过以下语句定义一个方法。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpc MethodName(parameterName) returns (returnName) &#123;&#125;</span><br></pre></td></tr></table></figure>
-<p>一般说来，参数和返回值是自定义的一个Message</p>
+<h4 id="定义服务"><a href="#定义服务" class="headerlink" title="定义服务"></a>定义服务</h4><p>通过一下语句可以定义一个服务。<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">service ServiceName &#123;</span><br><span class="line">    // something...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="定义方法"><a href="#定义方法" class="headerlink" title="定义方法"></a>定义方法</h4><p>通过以下语句定义一个方法。<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpc MethodName(parameterName) returns (returnName) &#123;&#125;</span><br></pre></td></tr></table></figure><br>一般说来，参数和返回值是自定义的一个Message</p>
 <h4 id="定义Message"><a href="#定义Message" class="headerlink" title="定义Message"></a>定义Message</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">message MessageName&#123;</span><br><span class="line">    typeName1 valueName1 = Tag1;</span><br><span class="line">    typeName2 valueName2 = Tag2;</span><br><span class="line">    // something...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>typeName表示类型，Protocol Bufffers支持的类型包括但不限于: int32</p>
-<p><em>未完待续。。。</em><br>[^1]:<a target="_blank" rel="noopener" href="https://grpc.io/">https://grpc.io/</a></p>
+<p><em>未完待续。。。</em></p>
 
-  </div>
-  
-    <div class="tags">
-    <span><i class="fa fa-tags"></i> Tags</span>
-      
-        <ul class="post-tag-list" itemprop="keywords"><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/gRPC%E6%A1%86%E6%9E%B6/" rel="tag">gRPC框架</a></li><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">学习笔记</a></li><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag">编程</a></li></ul>
-      
     </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag"># 编程</a>
+              <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag"># 学习笔记</a>
+              <a href="/tags/gRPC%E6%A1%86%E6%9E%B6/" rel="tag"># gRPC框架</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/08/23/%E6%B5%99%E6%B1%9F%E5%B7%A5%E4%B8%9A%E5%A4%A7%E5%AD%A6%E7%9B%B8%E5%85%B3%E4%BF%A1%E6%81%AF/" rel="prev" title="浙江工业大学相关信息">
+      <i class="fa fa-chevron-left"></i> 浙江工业大学相关信息
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/09/12/gRPC%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/" rel="next" title="gRPC踩坑记录">
+      gRPC踩坑记录 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
-</article>
 
-<!-- Comments -->
 
-<!-- End Comments --></section>
-    <footer id="footer" role="contentinfo">
-    <div>&copy; 2022 <a href="/">Finley&#39;s Blog</a>.
-    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Designed by <a href="http://rainylog.com" target="_blank">Rainy.</a>
-	</div>
-</footer><!-- end #footer -->
+          </div>
+          
 
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFRPC%E6%A1%86%E6%9E%B6%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">什么是RPC框架？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFgRPC%E6%A1%86%E6%9E%B6%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">什么是gRPC框架？</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%98%AF%E9%80%9A%E7%94%A8%E7%9A%84%EF%BC%9F"><span class="nav-number">2.1.</span> <span class="nav-text">为什么是通用的？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8gRPC%E6%A1%86%E6%9E%B6"><span class="nav-number">2.2.</span> <span class="nav-text">如何使用gRPC框架</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE"><span class="nav-number">2.2.1.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%99Protocol-Buffers"><span class="nav-number">2.2.2.</span> <span class="nav-text">写Protocol Buffers</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%E6%9C%8D%E5%8A%A1"><span class="nav-number">2.2.2.1.</span> <span class="nav-text">定义服务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%E6%96%B9%E6%B3%95"><span class="nav-number">2.2.2.2.</span> <span class="nav-text">定义方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89Message"><span class="nav-number">2.2.2.3.</span> <span class="nav-text">定义Message</span></a></li></ol></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">FinleyGe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/finleyge" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;finleyge" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:atlasgj@gmail.com" title="E-Mail → mailto:atlasgj@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
   
-<script src="/lib/fancybox/dist/jquery.fancybox.min.js"></script>
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">FinleyGe</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
 
 
   
-<script src="/js/helper.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
-<script src="/js/_third-party/gitment.js"></script>
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
 
 </body>
 </html>

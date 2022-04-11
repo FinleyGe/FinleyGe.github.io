@@ -1,10 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  
-  <title>python习题解析02 | Finley&#39;s Blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
   <meta name="description" content="Python 习题解析 02解析第三次上机作业 第一题1234567891011121314151617181920212223242526272829303132333435363738394041aDict &#x3D; &amp;#123;        &amp;#x27;张三&amp;#x27;: 76,        &amp;#x27;李四&amp;#x27;: 45,        &amp;#x27;王五&amp;#x27;: 83,">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python习题解析02">
@@ -18,107 +33,445 @@
 <meta property="article:tag" content="习题解析">
 <meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Finley&#39;s Blog" type="application/atom+xml">
-  
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0.css">
 
-  
-<link rel="stylesheet" href="/lib/fancybox/dist/jquery.fancybox.min.css">
+<link rel="canonical" href="http://example.com/2021/10/31/python%E4%B9%A0%E9%A2%98%E8%A7%A3%E6%9E%9002/">
 
-  
-<link rel="stylesheet" href="/css/main.css">
 
-  
-<script src="/lib/jquery/dist/jquery.min.js"></script>
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
 
+  <title>python习题解析02 | Finley's Blog</title>
   
-  
-  
-  
-<meta name="generator" content="Hexo 6.1.0"></head>
-<body>
-  <div id="wrapper">
-    <header id="header" class="clearfix">
-	<a id="logo" href="/" title="Finley&#39;s Blog">Finley&#39;s Blog</a>
-	
-	<nav id="nav-menu" class="clearfix">
-		<form id="search" method="post" action="./" role="search">
-			<input id="search-input" type="text" name="s" class="inputbox" value="Search" onfocus="if (value =='Search'){value =''}" onblur="if (value ==''){value='Search'}">
-		</form>
-		<ul>
-      
-				
-        <li><a class="main-nav-link" href="/">Home</a></li>
-      
-				
-        <li><a class="main-nav-link" href="/archives">Archives</a></li>
-      
-		</ul>
-	</nav>
-</header>
-    <section id="main" class="clearfix"><article class="post-detail">
-  <h1 class="post-title"><a href="/">python习题解析02</a></h1>
-  <ul class="post-meta">
-  <li><i class="fa fa-user"></i> Author FinleyGe</li>
-  <li><i class="fa fa-calendar"></i> Date 10月 31</li>
-  <li><i class="fa fa-folder"></i> Categories
-  
-    <a class="article-category-link" href="/categories/%E4%B9%A0%E9%A2%98%E8%A7%A3%E6%9E%90/">习题解析</a>
-  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Finley's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
   </li>
-</ul>
-  <div class="post-content">
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/31/python%E4%B9%A0%E9%A2%98%E8%A7%A3%E6%9E%9002/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="FinleyGe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Finley's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          python习题解析02
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-10-31 18:45:18" itemprop="dateCreated datePublished" datetime="2021-10-31T18:45:18+08:00">2021-10-31</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-03-13 10:59:00" itemprop="dateModified" datetime="2022-03-13T10:59:00+08:00">2022-03-13</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%B9%A0%E9%A2%98%E8%A7%A3%E6%9E%90/" itemprop="url" rel="index"><span itemprop="name">习题解析</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-      <h1 id="Python-习题解析-02"><a href="#Python-习题解析-02" class="headerlink" title="Python 习题解析 02"></a>Python 习题解析 02</h1><p>解析第三次上机作业</p>
+        <h1 id="Python-习题解析-02"><a href="#Python-习题解析-02" class="headerlink" title="Python 习题解析 02"></a>Python 习题解析 02</h1><p>解析第三次上机作业</p>
 <h2 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">aDict = &#123;</span><br><span class="line">        <span class="string">&#x27;张三&#x27;</span>: <span class="number">76</span>,</span><br><span class="line">        <span class="string">&#x27;李四&#x27;</span>: <span class="number">45</span>,</span><br><span class="line">        <span class="string">&#x27;王五&#x27;</span>: <span class="number">83</span>,</span><br><span class="line">        <span class="string">&#x27;赵六&#x27;</span>: <span class="number">66</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Task A</span></span><br><span class="line">d = &#123;</span><br><span class="line">        <span class="string">&#x27;钱七&#x27;</span>: <span class="number">90</span>,</span><br><span class="line">        <span class="string">&#x27;郑八&#x27;</span>: <span class="number">91</span>,</span><br><span class="line">&#125;</span><br><span class="line">aDict.update(d)</span><br><span class="line"><span class="built_in">print</span>(aDict)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Task B</span></span><br><span class="line">aDict[<span class="string">&#x27;李四&#x27;</span>] = <span class="number">60</span></span><br><span class="line"><span class="built_in">print</span>(aDict)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Task C</span></span><br><span class="line">aDict.pop(<span class="string">&#x27;赵六&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(aDict)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Task D</span></span><br><span class="line"><span class="built_in">print</span>(aDict.keys())</span><br><span class="line"></span><br><span class="line"><span class="comment"># Task E</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> aDict.items():</span><br><span class="line">    aDict[i[<span class="number">0</span>]] += <span class="number">5</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(aDict)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Task F</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">sorted</span>(aDict.items(), key = <span class="keyword">lambda</span> kv : (kv[<span class="number">1</span>], kv[<span class="number">0</span>])))</span><br><span class="line"><span class="comment"># print(sorted(aDict.items()))</span></span><br><span class="line"><span class="comment"># sorted(aDict.values())</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Task G</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> aDict.items():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;&#123;0&#125;-&#123;1&#125;&#x27;</span>.<span class="built_in">format</span>(i[<span class="number">0</span>], i[<span class="number">1</span>]))</span><br><span class="line">   </span><br></pre></td></tr></table></figure>
-
-
 <h2 id="第二题"><a href="#第二题" class="headerlink" title="第二题"></a>第二题</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">####### CODE</span></span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line">l = <span class="built_in">list</span>(random.randint(<span class="number">0</span>, <span class="number">10</span>) <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">100</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;raw list:&#x27;</span>, l)</span><br><span class="line">d = <span class="built_in">dict</span>()</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> l:</span><br><span class="line">    i = <span class="built_in">str</span>(i)</span><br><span class="line">    <span class="keyword">if</span> i <span class="keyword">in</span> d.keys():</span><br><span class="line">        d[i] += <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        d[i] = <span class="number">1</span></span><br><span class="line"></span><br><span class="line">sorted_dict = <span class="built_in">sorted</span>(d.items(), key = <span class="keyword">lambda</span> kv : (kv[<span class="number">1</span>], kv[<span class="number">0</span>]))</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;Result(sorted): &#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> sorted_dict:</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure>
-
 <h2 id="第三题"><a href="#第三题" class="headerlink" title="第三题"></a>第三题</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">###### CODE</span></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    i = <span class="built_in">input</span>(<span class="string">&#x27;输入代码(直接回车以结束):&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> i == <span class="string">&#x27;3&#x27;</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;老板&#x27;</span>)</span><br><span class="line">    <span class="keyword">elif</span> i == <span class="string">&#x27;2&#x27;</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;用户&#x27;</span>)</span><br><span class="line">    <span class="keyword">elif</span> i == <span class="string">&#x27;1&#x27;</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;员工&#x27;</span>)</span><br><span class="line">    <span class="keyword">elif</span> i == <span class="string">&#x27;&#x27;</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;bye!&#x27;</span>)</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;错误类型&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
 <p>还有一种讨巧的办法：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">d = &#123;<span class="number">3</span> : <span class="string">&#x27;老板&#x27;</span>, <span class="number">2</span>: <span class="string">&#x27;员工&#x27;</span>, <span class="number">1</span>: <span class="string">&#x27;用户&#x27;</span>&#125;</span><br><span class="line"><span class="built_in">print</span>(d.get(<span class="built_in">int</span>(<span class="built_in">input</span>()), <span class="string">&#x27;错误类型&#x27;</span>))</span><br></pre></td></tr></table></figure>
-
 <h2 id="第四题"><a href="#第四题" class="headerlink" title="第四题"></a>第四题</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">####### CODE</span></span><br><span class="line">i = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;月利润:&#x27;</span>))</span><br><span class="line">o = <span class="number">0</span></span><br><span class="line"><span class="keyword">if</span> i &lt;= <span class="number">1e5</span>:</span><br><span class="line">    o = i * <span class="number">0.05</span></span><br><span class="line"><span class="keyword">elif</span> <span class="number">1e5</span> &lt;= i &lt;= <span class="number">2e5</span>:</span><br><span class="line">    o = i * <span class="number">0.075</span></span><br><span class="line"><span class="keyword">elif</span> i &gt;= <span class="number">2e5</span>:</span><br><span class="line">    o = i * <span class="number">0.1</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;奖金: &#x27;</span>, o)</span><br></pre></td></tr></table></figure>
 
-  </div>
-  
-    <div class="tags">
-    <span><i class="fa fa-tags"></i> Tags</span>
-      
-        <ul class="post-tag-list" itemprop="keywords"><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/%E4%B9%A0%E9%A2%98%E8%A7%A3%E6%9E%90/" rel="tag">习题解析</a></li></ul>
-      
     </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E4%B9%A0%E9%A2%98%E8%A7%A3%E6%9E%90/" rel="tag"># 习题解析</a>
+              <a href="/tags/python/" rel="tag"># python</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/10/30/python%E4%B9%A0%E9%A2%98%E8%A7%A3%E6%9E%9001/" rel="prev" title="python习题解析01">
+      <i class="fa fa-chevron-left"></i> python习题解析01
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/11/29/ubuntu%E9%85%8D%E7%BD%AE%E5%AE%9E%E8%AE%B0/" rel="next" title="ubuntu配置实记">
+      ubuntu配置实记 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
-</article>
 
-<!-- Comments -->
 
-<!-- End Comments --></section>
-    <footer id="footer" role="contentinfo">
-    <div>&copy; 2022 <a href="/">Finley&#39;s Blog</a>.
-    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Designed by <a href="http://rainylog.com" target="_blank">Rainy.</a>
-	</div>
-</footer><!-- end #footer -->
+          </div>
+          
 
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Python-%E4%B9%A0%E9%A2%98%E8%A7%A3%E6%9E%90-02"><span class="nav-number">1.</span> <span class="nav-text">Python 习题解析 02</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E9%A2%98"><span class="nav-number">1.1.</span> <span class="nav-text">第一题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E9%A2%98"><span class="nav-number">1.2.</span> <span class="nav-text">第二题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E9%A2%98"><span class="nav-number">1.3.</span> <span class="nav-text">第三题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E9%A2%98"><span class="nav-number">1.4.</span> <span class="nav-text">第四题</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">FinleyGe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/finleyge" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;finleyge" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:atlasgj@gmail.com" title="E-Mail → mailto:atlasgj@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
   
-<script src="/lib/fancybox/dist/jquery.fancybox.min.js"></script>
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">FinleyGe</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
 
 
   
-<script src="/js/helper.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
-<script src="/js/_third-party/gitment.js"></script>
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
 
 </body>
 </html>

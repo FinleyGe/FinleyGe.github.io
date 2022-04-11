@@ -1,10 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  
-  <title>category: linux | Finley&#39;s Blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
   <meta property="og:type" content="website">
 <meta property="og:title" content="Finley&#39;s Blog">
 <meta property="og:url" content="http://example.com/categories/linux/index.html">
@@ -12,167 +27,390 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="FinleyGe">
 <meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/categories/linux/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>分类: linux | Finley's Blog</title>
   
-    <link rel="alternate" href="/atom.xml" title="Finley&#39;s Blog" type="application/atom+xml">
-  
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0.css">
 
-  
-<link rel="stylesheet" href="/lib/fancybox/dist/jquery.fancybox.min.css">
 
-  
-<link rel="stylesheet" href="/css/main.css">
 
-  
-<script src="/lib/jquery/dist/jquery.min.js"></script>
 
-  
-  
-  
-  
-<meta name="generator" content="Hexo 6.1.0"></head>
-<body>
-  <div id="wrapper">
-    <header id="header" class="clearfix">
-	<a id="logo" href="/" title="Finley&#39;s Blog">Finley&#39;s Blog</a>
-	
-	<nav id="nav-menu" class="clearfix">
-		<form id="search" method="post" action="./" role="search">
-			<input id="search-input" type="text" name="s" class="inputbox" value="Search" onfocus="if (value =='Search'){value =''}" onblur="if (value ==''){value='Search'}">
-		</form>
-		<ul>
-      
-				
-        <li><a class="main-nav-link" href="/">Home</a></li>
-      
-				
-        <li><a class="main-nav-link" href="/archives">Archives</a></li>
-      
-		</ul>
-	</nav>
-</header>
-    <section id="main" class="clearfix">
-  <article class="post-detail">
-    <h1 class="post-title"><a href="/">ubuntu配置实记</a></h1>
-    <ul class="post-meta">
-  <li><i class="fa fa-user"></i> Author FinleyGe</li>
-  <li><i class="fa fa-calendar"></i> Date 11月 29</li>
-  <li><i class="fa fa-folder"></i> Categories
-  
-    <a class="article-category-link" href="/categories/linux/">linux</a> <i class="fa fa-caret-right"></i> <a class="article-category-link" href="/categories/linux/%E8%AE%B0%E5%BD%95/">记录</a>
-  
-  </li>
-</ul>
-    <div class="post-content">
-      <h1 id="ubuntu-配置实记"><a href="#ubuntu-配置实记" class="headerlink" title="ubuntu 配置实记"></a>ubuntu 配置实记</h1><p>[toc]</p>
-<h2 id="笔者的设备"><a href="#笔者的设备" class="headerlink" title="笔者的设备"></a>笔者的设备</h2><ul>
-<li>电脑: 华硕天选2Plus （Asus TUF Gaming A17）<ul>
-<li>CPU: AMD Ryzen 7 5800H with Radeon Graphics</li>
-<li>独立显卡 NVIDIA RTX3060 MAX-Q </li>
-<li>网卡 Realtek Semiconductor Co., Ltd. RTK8111&#x2F;8168&#x2F;8411[^1]<br>[^1]: Linux下运行<code>lspci | grep -i &#39;eth&#39;</code>以查看网卡信息</li>
-</ul>
-</li>
-</ul>
-<h2 id="ubuntu安装"><a href="#ubuntu安装" class="headerlink" title="ubuntu安装"></a>ubuntu安装</h2><ol>
-<li>下载ubuntu镜像。</li>
-</ol>
-<p><strong>注意：</strong> 建议选择20.04 LTS版本（笔者使用的是21.10）[^2]</p>
-<p><a href="cn.ubuntu.com">官网下载</a></p>
-<ol start="2">
-<li>下载rufus</li>
-</ol>
-<p>rufus是一款轻松创建USB启动盘的软件。<br><a target="_blank" rel="noopener" href="https://rufus.ie/zh/">rufus</a></p>
-<ol start="3">
-<li>创建启动盘</li>
-</ol>
-<p>需要一个U盘，8G足够。<br>**注意:**在制作启动盘之前，先备份u盘原有内容。</p>
-<ol start="4">
-<li>分配磁盘</li>
-</ol>
-<p>按<code>win</code>键，键入<code>创建和格式化磁盘分区</code>，打开该工具。</p>
-<p>在磁盘上分出一定空间用以安装ubuntu。据dalao说，100G足矣。</p>
-<ol start="5">
-<li>重启电脑，进入bios系统（华硕电脑为<code>F2</code>键）。修改启动项，将U盘启动置于最前。</li>
-</ol>
-<p>关闭快速启动(Fast Boot)</p>
-<p>关闭安全启动(Secure Boot)（需要删除所有安全启动PIN）</p>
-<p><em>建议关闭上两项，否则可能出现奇怪的问题</em></p>
-<ol start="6">
-<li>save &amp; reboot 进入ubuntu安装程序。选择语言后，安装即可。</li>
-</ol>
-<p>可以选择与windows共存。</p>
-<p>[^2]: LTS 即长期支持版本（一般是五年），更稳定。</p>
-<h2 id="解决网络-amp-蓝牙问题"><a href="#解决网络-amp-蓝牙问题" class="headerlink" title="解决网络&amp;蓝牙问题"></a>解决网络&amp;蓝牙问题</h2><p>成功安装以后，可能出现没有无线网络的问题。</p>
-<p>笔者经过艰难的探索，了解到21.10的默认内核版本5.13没有适配Realtek的这一款网卡。所以需要升级kernel内核。</p>
-<p>执行<code>cat /proc/version</code>查看内核版本</p>
-<p>如果有条件连接网络，请连接有线网络（宽带，或者是通过数据线连接手机，手机打开“通过usb共享移动数据”）<br>如果没有条件，可以先切换到windows系统。</p>
-<p>下载ubuntu内核</p>
-<p><a target="_blank" rel="noopener" href="https://kernel.ubuntu.com/~kernel-ppa/mainline/">内核下载</a></p>
-<p>笔者选择了v5.15</p>
-<p>此处以5.15举例:</p>
-<p>找到5.15版本，点击打开，可以看到：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1.  amd64/linux-headers-5.15.0-051500-generic_5.15.0-051500.202110312130_amd64.deb</span><br><span class="line">2.  amd64/linux-headers-5.15.0-051500-lowlatency_5.15.0-051500.202110312130_amd64.deb</span><br><span class="line">3.  amd64/linux-headers-5.15.0-051500_5.15.0-051500.202110312130_all.deb</span><br><span class="line">4.  amd64/linux-image-unsigned-5.15.0-051500-generic_5.15.0-051500.202110312130_amd64.deb</span><br><span class="line">5.  amd64/linux-image-unsigned-5.15.0-051500-lowlatency_5.15.0-051500.202110312130_amd64.deb</span><br><span class="line">6.  amd64/linux-modules-5.15.0-051500-generic_5.15.0-051500.202110312130_amd64.deb</span><br><span class="line">7.  amd64/linux-modules-5.15.0-051500-lowlatency_5.15.0-051500.202110312130_amd64.deb</span><br></pre></td></tr></table></figure>
 
-<p>作为桌面用户，我们选择上述1, 3, 4, 6四个<br>（即写有generic，分别为headers, headers(all), image, modules）<br>下载后，通过<code>dpkg</code>命令安装。[^3]</p>
-<p>安装成功后，重启以使用新的内核。</p>
-<p>可以发现，无线网路已经可以使用。</p>
-<p><code>sudo apt upgrade</code>更新软件。</p>
-<p>[^3]:此处注意，如果一个一个安装，可能会因为<strong>依赖循环</strong>而报错。 所以可以使用 <code>dpkg -i *.deb</code>安装。</p>
-<!--
-## 安装必备软件
 
-1. 首先需要安装上网软件，懂的都懂。此处不便说，需要帮助可以联系笔者。
-2. 安装neovim
-3. 安装vscode
-4. 安装chrome
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
-## 配置neovim
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-1. 通过vim-Plug管理插件
-2. 使用coc代码补全插件
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
-此处简略写写，以后开一个新的blog写一下我的配置。
-## 美化
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
 
-1. 安装terminator
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
 
-`sudo apt install terminator`
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
 
-使用terminator代替原有的终端。
-
-2. 安装 zsh 和 oh my zsh
-
-3. 安装tmux（终端分屏）
-但是说实话笔者并不习惯用tmux
-
--->
-
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Finley's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content category">
+            
+
+  
+  
+  
+  <div class="post-block">
+    <div class="posts-collapse">
+      <div class="collection-title">
+        <h2 class="collection-header">linux
+          <small>分类</small>
+        </h2>
+      </div>
+
+      
+    <div class="collection-year">
+      <span class="collection-header">2021</span>
+    </div>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2021-11-29T20:05:00+08:00"
+              content="2021-11-29">
+          11-29
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2021/11/29/ubuntu%E9%85%8D%E7%BD%AE%E5%AE%9E%E8%AE%B0/" itemprop="url">
+            <span itemprop="name">ubuntu配置实记</span>
+          </a>
+      </div>
+
+    </header>
   </article>
 
-
-</section>
-    <footer id="footer" role="contentinfo">
-    <div>&copy; 2022 <a href="/">Finley&#39;s Blog</a>.
-    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Designed by <a href="http://rainylog.com" target="_blank">Rainy.</a>
-	</div>
-</footer><!-- end #footer -->
-
+    </div>
   </div>
   
-<script src="/lib/fancybox/dist/jquery.fancybox.min.js"></script>
+  
+  
+
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">FinleyGe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/finleyge" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;finleyge" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:atlasgj@gmail.com" title="E-Mail → mailto:atlasgj@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">FinleyGe</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
 
 
   
-<script src="/js/helper.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
-<script src="/js/_third-party/gitment.js"></script>
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
 
 </body>
 </html>

@@ -1,16 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  
-  <title>dart学习笔记（Iterable） | Finley&#39;s Blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Iterable(可迭代类)Iterable^1是一个Collection，是一个抽象类，表示一组可以依次访问(access sequentially)的对象。 Iterable是一个CollectionCollection是一个对象，它表示一组对象（称之为元素）。Iterable是一种Collection。 常见的三种Collection  List Set,（不重复） Map（ Key-Val">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="Iterable(可迭代类)Iterable1是一个Collection，是一个抽象类，表示一组可以依次访问(access sequentially)的对象。 Iterable是一个CollectionCollection是一个对象，它表示一组对象（称之为元素）。Iterable是一种Collection。 常见的三种Collection  List Set,（不重复） Map（ Key-Valu">
 <meta property="og:type" content="article">
 <meta property="og:title" content="dart学习笔记（Iterable）">
 <meta property="og:url" content="http://example.com/2021/09/21/dart%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88Iterable%EF%BC%89/index.html">
 <meta property="og:site_name" content="Finley&#39;s Blog">
-<meta property="og:description" content="Iterable(可迭代类)Iterable^1是一个Collection，是一个抽象类，表示一组可以依次访问(access sequentially)的对象。 Iterable是一个CollectionCollection是一个对象，它表示一组对象（称之为元素）。Iterable是一种Collection。 常见的三种Collection  List Set,（不重复） Map（ Key-Val">
+<meta property="og:description" content="Iterable(可迭代类)Iterable1是一个Collection，是一个抽象类，表示一组可以依次访问(access sequentially)的对象。 Iterable是一个CollectionCollection是一个对象，它表示一组对象（称之为元素）。Iterable是一种Collection。 常见的三种Collection  List Set,（不重复） Map（ Key-Valu">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-09-21T08:04:52.000Z">
 <meta property="article:modified_time" content="2022-03-13T02:59:00.262Z">
@@ -19,64 +34,191 @@
 <meta property="article:tag" content="dart">
 <meta property="article:tag" content="学习笔记">
 <meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Finley&#39;s Blog" type="application/atom+xml">
-  
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0.css">
 
-  
-<link rel="stylesheet" href="/lib/fancybox/dist/jquery.fancybox.min.css">
+<link rel="canonical" href="http://example.com/2021/09/21/dart%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88Iterable%EF%BC%89/">
 
-  
-<link rel="stylesheet" href="/css/main.css">
 
-  
-<script src="/lib/jquery/dist/jquery.min.js"></script>
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
 
+  <title>dart学习笔记（Iterable） | Finley's Blog</title>
   
-  
-  
-  
-<meta name="generator" content="Hexo 6.1.0"></head>
-<body>
-  <div id="wrapper">
-    <header id="header" class="clearfix">
-	<a id="logo" href="/" title="Finley&#39;s Blog">Finley&#39;s Blog</a>
-	
-	<nav id="nav-menu" class="clearfix">
-		<form id="search" method="post" action="./" role="search">
-			<input id="search-input" type="text" name="s" class="inputbox" value="Search" onfocus="if (value =='Search'){value =''}" onblur="if (value ==''){value='Search'}">
-		</form>
-		<ul>
-      
-				
-        <li><a class="main-nav-link" href="/">Home</a></li>
-      
-				
-        <li><a class="main-nav-link" href="/archives">Archives</a></li>
-      
-		</ul>
-	</nav>
-</header>
-    <section id="main" class="clearfix"><article class="post-detail">
-  <h1 class="post-title"><a href="/">dart学习笔记（Iterable）</a></h1>
-  <ul class="post-meta">
-  <li><i class="fa fa-user"></i> Author FinleyGe</li>
-  <li><i class="fa fa-calendar"></i> Date 9月 21</li>
-  <li><i class="fa fa-folder"></i> Categories
-  
-    <a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a> <i class="fa fa-caret-right"></i> <a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a> <i class="fa fa-caret-right"></i> <a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/dart/">dart</a>
-  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Finley's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
   </li>
-</ul>
-  <div class="post-content">
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/21/dart%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88Iterable%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="FinleyGe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Finley's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          dart学习笔记（Iterable）
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-09-21 16:04:52" itemprop="dateCreated datePublished" datetime="2021-09-21T16:04:52+08:00">2021-09-21</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-03-13 10:59:00" itemprop="dateModified" datetime="2022-03-13T10:59:00+08:00">2022-03-13</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%BC%96%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">编程</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%BC%96%E7%A8%8B/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%BC%96%E7%A8%8B/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/dart/" itemprop="url" rel="index"><span itemprop="name">dart</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-      <h2 id="Iterable-可迭代类"><a href="#Iterable-可迭代类" class="headerlink" title="Iterable(可迭代类)"></a>Iterable(可迭代类)</h2><p><strong>Iterable</strong><a href="%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%E4%B8%AD%E7%9A%84%E7%BF%BB%E8%AF%91%E6%98%AF%E2%80%9C%E5%8F%AF%E8%BF%AD%E4%BB%A3%E9%9B%86%E5%90%88%E2%80%9D%EF%BC%8C%E4%BD%86%E7%A7%81%E4%BB%A5%E4%B8%BA%E8%BF%99%E7%A7%8D%E7%BF%BB%E8%AF%91%E6%98%AF%E4%B8%8D%E5%A6%A5%E5%BD%93%E7%9A%84%E3%80%82%E5%85%B6%E4%B8%80%EF%BC%8CIterable%E6%98%AF%E4%B8%80%E4%B8%AA%E6%8A%BD%E8%B1%A1%E7%B1%BB%EF%BC%8C%E7%BF%BB%E8%AF%91%E6%88%90%E2%80%9C%E9%9B%86%E5%90%88%E2%80%9D%E4%BC%9A%E8%AF%AF%E4%BB%A5%E4%B8%BA%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E5%8F%AF%E4%BB%A5%E5%AE%9E%E4%BE%8B%E5%8C%96%E7%9A%84%E7%B1%BB%E3%80%82%E5%85%B6%E4%BA%8C%EF%BC%8CIterable%E6%98%AF%E4%B8%80%E4%B8%AA%E5%BD%A2%E5%AE%B9%E8%AF%8D%E3%80%82%E6%89%80%E4%BB%A5%E6%9C%AC%E6%96%87%E4%B8%AD%E6%8A%8AIterable%E7%A7%B0%E4%B8%BA%E5%8F%AF%E8%BF%AD%E4%BB%A3%E7%B1%BB%E3%80%82">^1</a>是一个<strong>Collection</strong>，是一个抽象类，表示一组可以依次访问(access sequentially)的对象。</p>
+        <h2 id="Iterable-可迭代类"><a href="#Iterable-可迭代类" class="headerlink" title="Iterable(可迭代类)"></a>Iterable(可迭代类)</h2><p><strong>Iterable</strong><sup><a href="#fn_1" id="reffn_1">1</a></sup>是一个<strong>Collection</strong>，是一个抽象类，表示一组可以依次访问(access sequentially)的对象。</p>
 <h3 id="Iterable是一个Collection"><a href="#Iterable是一个Collection" class="headerlink" title="Iterable是一个Collection"></a>Iterable是一个Collection</h3><p>Collection是一个<strong>对象</strong>，它表示一组对象（称之为<strong>元素</strong>）。<br>Iterable是一种Collection。</p>
 <p>常见的三种Collection</p>
 <ol>
@@ -84,52 +226,272 @@
 <li>Set,（不重复）</li>
 <li>Map（ Key-Value）</li>
 </ol>
-<h3 id="Iterable是一个抽象类"><a href="#Iterable是一个抽象类" class="headerlink" title="Iterable是一个抽象类"></a>Iterable是一个抽象类</h3><p>换言之，我们不能实例化Iterable，但是我们可以借由List和Set实现对Iterable的实例化。<br>List和Set派生自Iterable，而Map则不然。但是我们可以通过正确的使用Map的values（entries）从而以Iterable的方式读取Map。</p>
-<!-- ? 以什么方式呢？ -->
-
+<h3 id="Iterable是一个抽象类"><a href="#Iterable是一个抽象类" class="headerlink" title="Iterable是一个抽象类"></a>Iterable是一个抽象类</h3><p>换言之，我们不能实例化Iterable，但是我们可以借由List和Set实现对Iterable的实例化。<br>List和Set派生自Iterable，而Map则不然。但是我们可以通过正确的使用Map的values（entries）从而以Iterable的方式读取Map。<br><!-- ? 以什么方式呢？ --></p>
 <h3 id="Iterable"><a href="#Iterable" class="headerlink" title="Iterable"></a>Iterable</h3><p>与List不同，用index访问Iterable并不保证是高效的。</p>
 <p>Iterable原生没有“[ ]”操作符，可以使用elementAt()。</p>
 <h3 id="访问Iterable"><a href="#访问Iterable" class="headerlink" title="访问Iterable"></a>访问Iterable</h3><h6 id="1-使用for-in循环"><a href="#1-使用for-in循环" class="headerlink" title="1. 使用for-in循环"></a>1. 使用for-in循环</h6><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> iterable = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> element <span class="keyword">in</span> iterable) &#123;</span><br><span class="line">    <span class="built_in">print</span>(element);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <h6 id="2-使用first-和last"><a href="#2-使用first-和last" class="headerlink" title="2. 使用first 和last"></a>2. 使用first 和last</h6><p>类似C++，first是第一个元素，last是最后的元素。<br>注意：last需要访问前面的所有元素，所以在较大的iterable时，last可能是慢的。</p>
 <h6 id="3-使用firstWhere"><a href="#3-使用firstWhere" class="headerlink" title="3. 使用firstWhere"></a>3. 使用firstWhere</h6><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">String</span> element = iterable.firstWhere((element) =&gt; element.length &gt; <span class="number">5</span>);</span><br></pre></td></tr></table></figure>
-<p>firstWhere的参数是一个函数。<br>注意：<br>&#x3D;&gt;（箭头符）相当于return</p>
-<h3 id="检查元素"><a href="#检查元素" class="headerlink" title="检查元素"></a>检查元素</h3><p>any 和 every</p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (items.any((item) =&gt; item.contains(<span class="string">&#x27;a&#x27;</span>))) &#123;</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;At least one item contains &quot;a&quot;&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (items.every((item) =&gt; item.length &gt;= <span class="number">5</span>)) &#123;</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;All items have length &gt;= 5&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<p>firstWhere的参数是一个函数。<br>注意：<br>=&gt;（箭头符）相当于return</p>
+<h3 id="检查元素"><a href="#检查元素" class="headerlink" title="检查元素"></a>检查元素</h3><p>any 和 every<br><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (items.any((item) =&gt; item.contains(<span class="string">&#x27;a&#x27;</span>))) &#123;</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;At least one item contains &quot;a&quot;&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (items.every((item) =&gt; item.length &gt;= <span class="number">5</span>)) &#123;</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;All items have length &gt;= 5&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>any： iterable中有一个元素符合条件<br>every： iterable中所有元素符合条件</p>
 <h3 id="过滤"><a href="#过滤" class="headerlink" title="过滤"></a>过滤</h3>
-  </div>
-  
-    <div class="tags">
-    <span><i class="fa fa-tags"></i> Tags</span>
-      
-        <ul class="post-tag-list" itemprop="keywords"><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/dart/" rel="tag">dart</a></li><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">学习笔记</a></li><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag">编程</a></li></ul>
-      
     </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag"># 编程</a>
+              <a href="/tags/dart/" rel="tag"># dart</a>
+              <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag"># 学习笔记</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/09/12/gRPC%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/" rel="prev" title="gRPC踩坑记录">
+      <i class="fa fa-chevron-left"></i> gRPC踩坑记录
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/09/28/go%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="next" title="Golang 学习笔记">
+      Golang 学习笔记 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
-</article>
 
-<!-- Comments -->
 
-<!-- End Comments --></section>
-    <footer id="footer" role="contentinfo">
-    <div>&copy; 2022 <a href="/">Finley&#39;s Blog</a>.
-    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Designed by <a href="http://rainylog.com" target="_blank">Rainy.</a>
-	</div>
-</footer><!-- end #footer -->
+          </div>
+          
 
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Iterable-%E5%8F%AF%E8%BF%AD%E4%BB%A3%E7%B1%BB"><span class="nav-number">1.</span> <span class="nav-text">Iterable(可迭代类)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Iterable%E6%98%AF%E4%B8%80%E4%B8%AACollection"><span class="nav-number">1.1.</span> <span class="nav-text">Iterable是一个Collection</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Iterable%E6%98%AF%E4%B8%80%E4%B8%AA%E6%8A%BD%E8%B1%A1%E7%B1%BB"><span class="nav-number">1.2.</span> <span class="nav-text">Iterable是一个抽象类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Iterable"><span class="nav-number">1.3.</span> <span class="nav-text">Iterable</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BF%E9%97%AEIterable"><span class="nav-number">1.4.</span> <span class="nav-text">访问Iterable</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-%E4%BD%BF%E7%94%A8for-in%E5%BE%AA%E7%8E%AF"><span class="nav-number">1.4.0.0.1.</span> <span class="nav-text">1. 使用for-in循环</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-%E4%BD%BF%E7%94%A8first-%E5%92%8Clast"><span class="nav-number">1.4.0.0.2.</span> <span class="nav-text">2. 使用first 和last</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-%E4%BD%BF%E7%94%A8firstWhere"><span class="nav-number">1.4.0.0.3.</span> <span class="nav-text">3. 使用firstWhere</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A3%80%E6%9F%A5%E5%85%83%E7%B4%A0"><span class="nav-number">1.5.</span> <span class="nav-text">检查元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%87%E6%BB%A4"><span class="nav-number">1.6.</span> <span class="nav-text">过滤</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">FinleyGe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/finleyge" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;finleyge" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:atlasgj@gmail.com" title="E-Mail → mailto:atlasgj@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
   
-<script src="/lib/fancybox/dist/jquery.fancybox.min.js"></script>
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">FinleyGe</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
 
 
   
-<script src="/js/helper.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
-<script src="/js/_third-party/gitment.js"></script>
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
 
 </body>
 </html>
