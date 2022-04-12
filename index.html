@@ -149,6 +149,159 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/12/ubuntu%E4%B8%8B%E7%9A%84%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="FinleyGe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Finley's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/04/12/ubuntu%E4%B8%8B%E7%9A%84%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/" class="post-title-link" itemprop="url">ubuntu软件推荐</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-04-12 20:00:00 / 修改时间：22:15:53" itemprop="dateCreated datePublished" datetime="2022-04-12T20:00:00+08:00">2022-04-12</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/" itemprop="url" rel="index"><span itemprop="name">软件推荐</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>[toc]</p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在<a target="_blank" rel="noopener" href="https://finleyge.github.io/2021/11/29/ubuntu%E9%85%8D%E7%BD%AE%E5%AE%9E%E8%AE%B0/">上一篇 blog</a> 中我曾说要写一篇新的 blog 以推荐我在 ubuntu 下使用的各种软件。</p>
+<p>已经鸽了这么长时间，积累了不少好用的软件，推荐给各位。</p>
+<h1 id="基础软件"><a href="#基础软件" class="headerlink" title="基础软件"></a>基础软件</h1><p>装机后必装的软件。</p>
+<p>请在安装软件以前保证您的设备的<strong>网络畅通无阻</strong>。<br><em>由于众所知周的原因，可以参考我的<a target="_blank" rel="noopener" href="https://finleyge.github.io">github page</a></em><br>并且<strong>更新了您的软件源</strong>。（可以参考上一篇文章）</p>
+<h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p><code>sudo apt install git</code></p>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p><code>git config --global user.name username</code><br><code>git config --global user.email yourEmail@example.com</code></p>
+<h2 id="Google-Chrome"><a href="#Google-Chrome" class="headerlink" title="Google Chrome"></a>Google Chrome</h2><p>Firefox 和 Chrome 的争端是一直以来津津乐道的话题。<br>笔者更倾向于使用Chrome。<br><a target="_blank" rel="noopener" href="https://www.google.com/intl/zh-CN/chrome/">google chrome 官网</a>中提供了<code>.deb</code>格式的安装包。下载后通过<code>sudo dpkg -i filename.deb</code>或者<code>ubuntu</code>自带的软件管理器安装。</p>
+<h2 id="Fcitx5"><a href="#Fcitx5" class="headerlink" title="Fcitx5"></a>Fcitx5</h2><p>Ubuntu默认使用<code>ibus</code>作为输入法管理器，但是年代久远，不好用。<br>使用<code>Fcitx5</code>作为新的输入法管理器。</p>
+<ol>
+<li><code>sudo apt install fcitx5-im</code> 安装本体、以及常用的配置等。</li>
+<li><code>sudo apt install fcitx5-chinese-addon</code> 安装中文输入法。</li>
+<li>修改默认输入法<ol>
+<li>打开<code>语言支持</code></li>
+<li>修改<code>fcitx5</code>为默认的输入法</li>
+</ol>
+</li>
+<li>删除<code>ibus</code> : <code>sudo apt purge ibus</code></li>
+</ol>
+<h2 id="包（软件）管理器"><a href="#包（软件）管理器" class="headerlink" title="包（软件）管理器"></a>包（软件）管理器</h2><h3 id="Snappy"><a href="#Snappy" class="headerlink" title="Snappy"></a>Snappy</h3><p>也就是<code>snap</code>， 用于<code>ubuntu</code>的包管理器。</p>
+<p><code>sudo apt install snapd</code></p>
+<h3 id="Flatpak"><a href="#Flatpak" class="headerlink" title="Flatpak"></a>Flatpak</h3><p>其本质是一个应用程序沙盒。但在实际使用中可以被视为一个包管理器。</p>
+<h3 id="AppImageLauncher"><a href="#AppImageLauncher" class="headerlink" title="AppImageLauncher"></a>AppImageLauncher</h3><p>AppImageLauncher 是用以管理 AppImage 的一个管理器。<br>可以在 Github 上<a target="_blank" rel="noopener" href="https://github.com/TheAssassin/AppImageLauncher/releases/tag/v2.2.0">下载</a>。</p>
+<h1 id="Ubuntu-Gnome-桌面美化"><a href="#Ubuntu-Gnome-桌面美化" class="headerlink" title="Ubuntu Gnome 桌面美化"></a>Ubuntu Gnome 桌面美化</h1><p>笔者曾经使用 Kubuntu 的 KDE Plasma 桌面。不可否认的是 KDE 桌面更为华丽。</p>
+<p>但是由于笔者的某些错误操作，导致 Kubuntu 删除了自己的桌面造成了……所以还是选择了Ubuntu</p>
+<p>作为一个开发者，或许过于华丽并非是必要的。</p>
+<p>但是 <strong>美观即是生产力</strong>， 对桌面的美化也是需要的，所以推荐以下几个软件。</p>
+<ul>
+<li>variety</li>
+<li>Gnome-Tweaks</li>
+<li>Gnome 插件</li>
+</ul>
+<h2 id="Variety"><a href="#Variety" class="headerlink" title="Variety"></a>Variety</h2><p><a target="_blank" rel="noopener" href="https://launchpad.net/variety">Variety</a> 是一个强大的桌面背景管理器。可以自动从图片源下载图片作为桌面背景。</p>
+<h3 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h3><p><code>sudo apt install variety</code></p>
+<h3 id="配置-1"><a href="#配置-1" class="headerlink" title="配置"></a>配置</h3><p>此软件是开箱即用的，并且支持中文。</p>
+<h2 id="Gnome-Tweaks"><a href="#Gnome-Tweaks" class="headerlink" title="Gnome-Tweaks"></a>Gnome-Tweaks</h2><p>执行<code>sudo apt install gnome-tweaks</code>安装。<br>可以修改 gnome 桌面的主题、图表、鼠标等等。</p>
+<h2 id="Gnome-插件"><a href="#Gnome-插件" class="headerlink" title="Gnome 插件"></a>Gnome 插件</h2><p>在 Chrome 或 Firefox 中可以下载 <code>GNOME Shell integration</code> 拓展，更方便的管理 Gnome</p>
+<p>访问：<br><a target="_blank" rel="noopener" href="https://extensions.gnome.org/">https://extensions.gnome.org/</a><br>以下载gnome插件。</p>
+<h3 id="插件推荐"><a href="#插件推荐" class="headerlink" title="插件推荐"></a>插件推荐</h3><ol>
+<li><code>Clipboard Indicator</code> 用于管理剪切板历史</li>
+<li><code>Dash to Dock</code> 替换原有的丑陋的dock栏（不过说实话还是很丑）</li>
+<li><code>Disconnect WiFi</code> 可以<code>断开WiFi链接</code></li>
+<li><code>GSConnect</code> 是<code>KDE Connect</code>的 <code>gnome</code> 实现，神器，在局域网中和安卓手机联动。安卓手机需要下载<code>KDE Connect</code></li>
+<li><code>Input Method Panel</code> 可以使<code>fcitx5</code>的<code>KDE</code>界面在<code>Gnome</code>下运行。</li>
+<li><code>Open Weather</code> 天气预报</li>
+<li><code>Recent Items</code> 最近打开的目录、文件</li>
+<li><code>Removable Drive Menu</code> 管理可移除设备（U盘、移动硬盘等）</li>
+<li><code>Sound Input &amp; Output Device Chooser</code> 管理声音输入输出设备</li>
+</ol>
+<h1 id="生产力-学习"><a href="#生产力-学习" class="headerlink" title="生产力 / 学习"></a>生产力 / 学习</h1><h2 id="Visual-Studio-Code"><a href="#Visual-Studio-Code" class="headerlink" title="Visual Studio Code"></a>Visual Studio Code</h2><p>不作介绍，下就完了。</p>
+<p><a target="_blank" rel="noopener" href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></p>
+<h3 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h3><p>个人认为 Linux 下配置环境比 windows 简单。<br>此处只写几个常用的环境。</p>
+<ol>
+<li>cpp<br>直接<code>sudo apt install gcc</code></li>
+<li>python<br>默认有python<br><em>tips: 默认是 python3, 开启 shell 需要执行 python3</em></li>
+</ol>
+<h2 id="Neovim"><a href="#Neovim" class="headerlink" title="Neovim"></a>Neovim</h2><p><code>sudo snap install neovim</code></p>
+<h2 id="Obsidian"><a href="#Obsidian" class="headerlink" title="Obsidian"></a>Obsidian</h2><p>一个支持 <strong>双向链接</strong>， 支持 <strong>Markdown</strong> 的编辑器。<br>很好用。<br>我将再写一个新的 blog 介绍这个软件。</p>
+<p>从官网<a target="_blank" rel="noopener" href="https://obsidian.md/">下载</a>。</p>
+<h2 id="Anki"><a href="#Anki" class="headerlink" title="Anki"></a>Anki</h2><p>一个卡片式的记忆记忆软件。网上的教程很多，我也有计划写一个新的 blog。</p>
+<p><code>sudo apt install anki</code></p>
+<h1 id="娱乐"><a href="#娱乐" class="headerlink" title="娱乐"></a>娱乐</h1><h2 id="网易云音乐"><a href="#网易云音乐" class="headerlink" title="网易云音乐"></a>网易云音乐</h2><p>网易云音乐官方提供<code>.deb</code>格式的安装包。<br><a target="_blank" rel="noopener" href="https://music.163.com/#/download">下载</a></p>
+<h2 id="Spotify"><a href="#Spotify" class="headerlink" title="Spotify"></a>Spotify</h2><p><code>snap install spotify</code></p>
+<h2 id="VLC-视频播放器"><a href="#VLC-视频播放器" class="headerlink" title="VLC 视频播放器"></a>VLC 视频播放器</h2><p><code>sudo snap install vlc</code></p>
+<h1 id="杂项"><a href="#杂项" class="headerlink" title="杂项"></a>杂项</h1><h2 id="Proxychains"><a href="#Proxychains" class="headerlink" title="Proxychains"></a>Proxychains</h2><p>使用 Proxychains 更好地配置代理。<br>某些情况下安装软件时并不能走系统代理。</p>
+<p><code>sudo apt install proxychains</code></p>
+<h3 id="配置-proxychains"><a href="#配置-proxychains" class="headerlink" title="配置 proxychains"></a>配置 proxychains</h3><p><code>vim /etc/proxychains.conf</code></p>
+<p>删除文件末尾的默认代理。</p>
+<p>在文件末尾加入：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">socks5 xxx.xxx.xxx.xxx xxxx</span><br></pre></td></tr></table></figure></p>
+<h2 id="qBittorrent"><a href="#qBittorrent" class="headerlink" title="qBittorrent"></a>qBittorrent</h2><p>p2p下载工具。</p>
+<p><code>sudo apt install qbittorrent</code></p>
+<h2 id="telegram"><a href="#telegram" class="headerlink" title="telegram"></a>telegram</h2><p><code>sudo snap install telegram-desktop</code></p>
+<h2 id="extract"><a href="#extract" class="headerlink" title="extract"></a>extract</h2><p>一个解压工具，不需要记忆那些奇奇怪怪的解压命令。<br><code>sudo apt install extract</code></p>
+<h2 id="syncthing"><a href="#syncthing" class="headerlink" title="syncthing"></a>syncthing</h2><p>去中心化的同步工具。</p>
+<p>官网有详细的<a target="_blank" rel="noopener" href="https://apt.syncthing.net/">教程</a>。</p>
+<h2 id="Send-Any-Where"><a href="#Send-Any-Where" class="headerlink" title="Send Any Where"></a>Send Any Where</h2><p><a target="_blank" rel="noopener" href="https://send-anywhere.com/">官网</a>。</p>
+<p>方便在设备之间传输文件。</p>
+<h2 id="Calibre"><a href="#Calibre" class="headerlink" title="Calibre"></a>Calibre</h2><p>一个电子书管理器。<br><code>sudo apt install calibre</code></p>
+<h2 id="Zathura"><a href="#Zathura" class="headerlink" title="Zathura"></a>Zathura</h2><p>一个pdf阅读器，支持<code>vim</code>的操作方式。</p>
+<p>使用 <code>vim</code> 写 $\LaTeX$时的好帮手。</p>
+<p><code>sudo apt install zathura</code></p>
+<h2 id="howdy"><a href="#howdy" class="headerlink" title="howdy"></a>howdy</h2><p>类似<code>Windows Hello</code>的人脸解锁工具。<br><a target="_blank" rel="noopener" href="https://github.com/boltgolt/howdy/releases">release</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/29/ubuntu%E9%85%8D%E7%BD%AE%E5%AE%9E%E8%AE%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -180,7 +333,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-04-11 23:35:34" itemprop="dateModified" datetime="2022-04-11T23:35:34+08:00">2022-04-11</time>
+                <time title="修改时间：2022-04-12 16:37:45" itemprop="dateModified" datetime="2022-04-12T16:37:45+08:00">2022-04-12</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -207,18 +360,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="ubuntu-配置实记"><a href="#ubuntu-配置实记" class="headerlink" title="ubuntu 配置实记"></a>ubuntu 配置实记</h1><h2 id="笔者的设备"><a href="#笔者的设备" class="headerlink" title="笔者的设备"></a>笔者的设备</h2><ul>
+          <h1 id="下载-Ubuntu-镜像"><a href="#下载-Ubuntu-镜像" class="headerlink" title="下载 Ubuntu 镜像"></a>下载 Ubuntu 镜像</h1><h2 id="笔者的设备"><a href="#笔者的设备" class="headerlink" title="笔者的设备"></a>笔者的设备</h2><ul>
 <li>电脑: 华硕天选2Plus （Asus TUF Gaming A17）<ul>
 <li>CPU: AMD Ryzen 7 5800H with Radeon Graphics</li>
 <li>独立显卡 NVIDIA RTX3060 MAX-Q </li>
-<li>网卡 Realtek Semiconductor Co., Ltd. RTK8111/8168/8411<sup><a href="#fn_1" id="reffn_1">1</a></sup><blockquote id="fn_1">
+<li>网卡 Realtek Semiconductor Co., Ltd. RTK8111/8168/8411<sup><a href="#fn_1" id="reffn_1">1</a></sup></li>
+</ul>
+</li>
+</ul>
+<blockquote id="fn_1">
 <sup>1</sup>. Linux下运行<code>lspci | grep -i &#39;eth&#39;</code>以查看网卡信息<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#8617;</a>
 </blockquote>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="ubuntu安装"><a href="#ubuntu安装" class="headerlink" title="ubuntu安装"></a>ubuntu安装</h2><ol>
+<ol>
 <li>下载ubuntu镜像。</li>
 </ol>
 <p><strong>注意：</strong> 建议选择20.04 LTS版本（笔者使用的是21.10）<sup><a href="#fn_2" id="reffn_2">2</a></sup></p>
@@ -243,50 +396,38 @@
 <p>关闭安全启动(Secure Boot)（需要删除所有安全启动PIN）</p>
 <p><em>建议关闭上两项，否则可能出现奇怪的问题</em></p>
 <ol>
-<li>save &amp; reboot 进入ubuntu安装程序。选择语言后，安装即可。</li>
+<li>save &amp; reboot </li>
 </ol>
-<p>可以选择与windows共存。</p>
 <blockquote id="fn_2">
 <sup>2</sup>. LTS 即长期支持版本（一般是五年），更稳定。<a href="#reffn_2" title="Jump back to footnote [2] in the text."> &#8617;</a>
 </blockquote>
-<h2 id="解决网络-amp-蓝牙问题"><a href="#解决网络-amp-蓝牙问题" class="headerlink" title="解决网络&amp;蓝牙问题"></a>解决网络&amp;蓝牙问题</h2><p>成功安装以后，可能出现没有无线网络的问题。</p>
+<h1 id="Ubuntu-安装"><a href="#Ubuntu-安装" class="headerlink" title="Ubuntu 安装"></a>Ubuntu 安装</h1><p>进入ubuntu安装程序。选择语言后，安装即可。</p>
+<ul>
+<li>可以选择与windows共存。</li>
+<li>请谨慎决定您的系统盘大小划分。（笔者划分了 128 GB）<h1 id="配置-Ubuntu"><a href="#配置-Ubuntu" class="headerlink" title="配置 Ubuntu"></a>配置 Ubuntu</h1></li>
+</ul>
+<h2 id="解决网络-amp-蓝牙问题"><a href="#解决网络-amp-蓝牙问题" class="headerlink" title="解决网络 &amp; 蓝牙问题"></a>解决网络 &amp; 蓝牙问题</h2><p>成功安装以后，可能出现没有无线网络的问题。</p>
 <p>笔者经过艰难的探索，了解到21.10的默认内核版本5.13没有适配Realtek的这一款网卡。所以需要升级kernel内核。</p>
 <p>执行<code>cat /proc/version</code>查看内核版本</p>
-<p>如果有条件连接网络，请连接有线网络（宽带，或者是通过数据线连接手机，手机打开“通过usb共享移动数据”）<br>如果没有条件，可以先切换到windows系统。</p>
-<p>下载ubuntu内核</p>
+<p>如果有条件连接网络，请连接有线网络（宽带，或者是通过数据线连接手机，手机打开“通过 usb 共享移动数据”）<br>如果没有条件，可以先切换到 windows 系统。</p>
+<p>下载 ubuntu 内核</p>
 <p><a target="_blank" rel="noopener" href="https://kernel.ubuntu.com/~kernel-ppa/mainline/">内核下载</a></p>
-<p>笔者选择了v5.15</p>
-<p>此处以5.15举例:</p>
-<p>找到5.15版本，点击打开，可以看到：</p>
+<p>笔者选择了 v5.15</p>
+<p>此处以 5.15 举例:</p>
+<p>找到 5.15 版本，点击打开，可以看到：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1.  amd64/linux-headers-5.15.0-051500-generic_5.15.0-051500.202110312130_amd64.deb</span><br><span class="line">2.  amd64/linux-headers-5.15.0-051500-lowlatency_5.15.0-051500.202110312130_amd64.deb</span><br><span class="line">3.  amd64/linux-headers-5.15.0-051500_5.15.0-051500.202110312130_all.deb</span><br><span class="line">4.  amd64/linux-image-unsigned-5.15.0-051500-generic_5.15.0-051500.202110312130_amd64.deb</span><br><span class="line">5.  amd64/linux-image-unsigned-5.15.0-051500-lowlatency_5.15.0-051500.202110312130_amd64.deb</span><br><span class="line">6.  amd64/linux-modules-5.15.0-051500-generic_5.15.0-051500.202110312130_amd64.deb</span><br><span class="line">7.  amd64/linux-modules-5.15.0-051500-lowlatency_5.15.0-051500.202110312130_amd64.deb</span><br></pre></td></tr></table></figure>
 <p>作为桌面用户，我们选择上述1, 3, 4, 6四个<br>（即写有generic，分别为headers, headers(all), image, modules）<br>下载后，通过<code>dpkg</code>命令安装。<sup><a href="#fn_3" id="reffn_3">3</a></sup></p>
 <p>安装成功后，重启以使用新的内核。</p>
 <p>可以发现，无线网路已经可以使用。</p>
-<p><code>sudo apt upgrade</code>更新软件。</p>
-<p><sup><a href="#fn_3" id="reffn_3">3</a></sup>:此处注意，如果一个一个安装，可能会因为<strong>依赖循环</strong>而报错。 所以可以使用 <code>dpkg -i *.deb</code>安装。<br>&lt;!—</p>
-<h2 id="安装必备软件"><a href="#安装必备软件" class="headerlink" title="安装必备软件"></a>安装必备软件</h2><ol>
-<li>首先需要安装上网软件，懂的都懂。此处不便说，需要帮助可以联系笔者。</li>
-<li>安装neovim</li>
-<li>安装vscode</li>
-<li>安装chrome</li>
-</ol>
-<h2 id="配置neovim"><a href="#配置neovim" class="headerlink" title="配置neovim"></a>配置neovim</h2><ol>
-<li>通过vim-Plug管理插件</li>
-<li>使用coc代码补全插件</li>
-</ol>
-<p>此处简略写写，以后开一个新的blog写一下我的配置。</p>
-<h2 id="美化"><a href="#美化" class="headerlink" title="美化"></a>美化</h2><ol>
-<li>安装terminator</li>
-</ol>
-<p><code>sudo apt install terminator</code></p>
-<p>使用terminator代替原有的终端。</p>
-<ol>
-<li><p>安装 zsh 和 oh my zsh</p>
-</li>
-<li><p>安装tmux（终端分屏）<br>但是说实话笔者并不习惯用tmux</p>
-</li>
-</ol>
-<p>—&gt;</p>
+<p><sup><a href="#fn_3" id="reffn_3">3</a></sup>:此处注意，如果一个一个安装，可能会因为<strong>依赖循环</strong>而报错。 所以可以使用 <code>dpkg -i *.deb</code>安装。</p>
+<h2 id="更新软件源"><a href="#更新软件源" class="headerlink" title="更新软件源"></a>更新软件源</h2><p>Ubuntu 更新软件源是很简单的，可以通过图形化界面管理。</p>
+<p>打开<code>软件和更新</code></p>
+<p>修改<code>下载自</code></p>
+<ul>
+<li>选择<code>其他服务器</code></li>
+<li>选择<code>选择最佳服务器</code></li>
+</ul>
+<p><code>sudo apt update &amp;&amp; sudo apt upgrade</code></p>
 
       
     </div>
@@ -1133,95 +1274,6 @@ Viewmodel又成为binder 即 绑定器.
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/09/gRPC%E6%A1%86%E6%9E%B6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="FinleyGe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Finley's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/09/gRPC%E6%A1%86%E6%9E%B6/" class="post-title-link" itemprop="url">gRPC框架</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-09 19:12:14" itemprop="dateCreated datePublished" datetime="2021-09-09T19:12:14+08:00">2021-09-09</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-03-13 10:59:00" itemprop="dateModified" datetime="2022-03-13T10:59:00+08:00">2022-03-13</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%BC%96%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">编程</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%BC%96%E7%A8%8B/%E6%A1%86%E6%9E%B6/" itemprop="url" rel="index"><span itemprop="name">框架</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="什么是RPC框架？"><a href="#什么是RPC框架？" class="headerlink" title="什么是RPC框架？"></a>什么是RPC框架？</h1><p><strong>RPC</strong>框架，即<strong>Remote Procedure Call</strong>（远程过程调用），是一个<strong>计算机通信协议</strong>。<br>该协议允许计算机远程调用另一台计算机上的程序，实现Server/Client模式。</p>
-<h1 id="什么是gRPC框架？"><a href="#什么是gRPC框架？" class="headerlink" title="什么是gRPC框架？"></a>什么是gRPC框架？</h1><p>gRPC框架的官方文档：<a target="_blank" rel="noopener" href="https://grpc.io/">https://grpc.io/</a><br>gRPC框架是Google开发的一款开源的、高性能的、<strong>通用</strong>的面向HTTP/2的RPC框架。</p>
-<h2 id="为什么是通用的？"><a href="#为什么是通用的？" class="headerlink" title="为什么是通用的？"></a>为什么是通用的？</h2><p>gRPC可以实现多语言端的通信。包括但不限于Golang, Python, Dart等。</p>
-<p>gRPC框架使用<strong>protocol buffers</strong>作为其<strong>IDL</strong>语言。<br><strong>IDL</strong>: Interface Description Language ,接口定义语言。</p>
-<p>简单说来，通过protocol buffers描述定义各种接口和各种数据结构，再通过<strong>编译器</strong>（<strong>Protoc</strong>）自动化实现各个语言版本。<br>当然这种实现仅仅是提供一个框架，而要实现其功能，还需要实际上填充代码。</p>
-<h2 id="如何使用gRPC框架"><a href="#如何使用gRPC框架" class="headerlink" title="如何使用gRPC框架"></a>如何使用gRPC框架</h2><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>此处略去，可以参考官方文档<sup><a href="#fn_1" id="reffn_1">1</a></sup>。</p>
-<h3 id="写Protocol-Buffers"><a href="#写Protocol-Buffers" class="headerlink" title="写Protocol Buffers"></a>写Protocol Buffers</h3><p>Protocol Buffers的文件后缀是 <strong>.proto</strong>。<br>Protocol Buffers是一款灵活的(Flexible)，高效的(Effcient)，自动化(Automated)的接口定义语言。</p>
-<h4 id="定义服务"><a href="#定义服务" class="headerlink" title="定义服务"></a>定义服务</h4><p>通过一下语句可以定义一个服务。<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">service ServiceName &#123;</span><br><span class="line">    // something...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h4 id="定义方法"><a href="#定义方法" class="headerlink" title="定义方法"></a>定义方法</h4><p>通过以下语句定义一个方法。<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpc MethodName(parameterName) returns (returnName) &#123;&#125;</span><br></pre></td></tr></table></figure><br>一般说来，参数和返回值是自定义的一个Message</p>
-<h4 id="定义Message"><a href="#定义Message" class="headerlink" title="定义Message"></a>定义Message</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">message MessageName&#123;</span><br><span class="line">    typeName1 valueName1 = Tag1;</span><br><span class="line">    typeName2 valueName2 = Tag2;</span><br><span class="line">    // something...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>typeName表示类型，Protocol Bufffers支持的类型包括但不限于: int32</p>
-<p><em>未完待续。。。</em></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1291,12 +1343,12 @@ Viewmodel又成为binder 即 绑定器.
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-count">16</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">14</span>
         <span class="site-state-item-name">分类</span>
       </div>
       <div class="site-state-item site-state-tags">

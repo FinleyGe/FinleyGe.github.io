@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="[toc] 前言在上一篇 blog 中我曾说要写一篇新的 blog 以推荐我在 ubuntu 下使用的各种软件。 已经鸽了这么长时间，积累了不少好用的软件，推荐给各位。 基础软件装机后必装的软件。 请在安装软件以前保证您的设备的网络畅通无阻。由于众所知周的原因，可以参考我的github page并且更新了您的软件源。（可以参考上一篇文章） Git安装sudo apt install git 配置g">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ubuntu软件推荐">
+<meta property="og:url" content="http://example.com/2022/04/12/ubuntu%E4%B8%8B%E7%9A%84%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/index.html">
+<meta property="og:site_name" content="Finley&#39;s Blog">
+<meta property="og:description" content="[toc] 前言在上一篇 blog 中我曾说要写一篇新的 blog 以推荐我在 ubuntu 下使用的各种软件。 已经鸽了这么长时间，积累了不少好用的软件，推荐给各位。 基础软件装机后必装的软件。 请在安装软件以前保证您的设备的网络畅通无阻。由于众所知周的原因，可以参考我的github page并且更新了您的软件源。（可以参考上一篇文章） Git安装sudo apt install git 配置g">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-04-12T12:00:00.000Z">
+<meta property="article:modified_time" content="2022-04-12T14:15:53.388Z">
+<meta property="article:author" content="FinleyGe">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="ubuntu">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2022/04/12/ubuntu%E4%B8%8B%E7%9A%84%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>ubuntu软件推荐 | Finley's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Finley's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/12/ubuntu%E4%B8%8B%E7%9A%84%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="FinleyGe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Finley's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          ubuntu软件推荐
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-04-12 20:00:00 / 修改时间：22:15:53" itemprop="dateCreated datePublished" datetime="2022-04-12T20:00:00+08:00">2022-04-12</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/" itemprop="url" rel="index"><span itemprop="name">软件推荐</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>[toc]</p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在<a target="_blank" rel="noopener" href="https://finleyge.github.io/2021/11/29/ubuntu%E9%85%8D%E7%BD%AE%E5%AE%9E%E8%AE%B0/">上一篇 blog</a> 中我曾说要写一篇新的 blog 以推荐我在 ubuntu 下使用的各种软件。</p>
+<p>已经鸽了这么长时间，积累了不少好用的软件，推荐给各位。</p>
+<h1 id="基础软件"><a href="#基础软件" class="headerlink" title="基础软件"></a>基础软件</h1><p>装机后必装的软件。</p>
+<p>请在安装软件以前保证您的设备的<strong>网络畅通无阻</strong>。<br><em>由于众所知周的原因，可以参考我的<a target="_blank" rel="noopener" href="https://finleyge.github.io">github page</a></em><br>并且<strong>更新了您的软件源</strong>。（可以参考上一篇文章）</p>
+<h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p><code>sudo apt install git</code></p>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p><code>git config --global user.name username</code><br><code>git config --global user.email yourEmail@example.com</code></p>
+<h2 id="Google-Chrome"><a href="#Google-Chrome" class="headerlink" title="Google Chrome"></a>Google Chrome</h2><p>Firefox 和 Chrome 的争端是一直以来津津乐道的话题。<br>笔者更倾向于使用Chrome。<br><a target="_blank" rel="noopener" href="https://www.google.com/intl/zh-CN/chrome/">google chrome 官网</a>中提供了<code>.deb</code>格式的安装包。下载后通过<code>sudo dpkg -i filename.deb</code>或者<code>ubuntu</code>自带的软件管理器安装。</p>
+<h2 id="Fcitx5"><a href="#Fcitx5" class="headerlink" title="Fcitx5"></a>Fcitx5</h2><p>Ubuntu默认使用<code>ibus</code>作为输入法管理器，但是年代久远，不好用。<br>使用<code>Fcitx5</code>作为新的输入法管理器。</p>
+<ol>
+<li><code>sudo apt install fcitx5-im</code> 安装本体、以及常用的配置等。</li>
+<li><code>sudo apt install fcitx5-chinese-addon</code> 安装中文输入法。</li>
+<li>修改默认输入法<ol>
+<li>打开<code>语言支持</code></li>
+<li>修改<code>fcitx5</code>为默认的输入法</li>
+</ol>
+</li>
+<li>删除<code>ibus</code> : <code>sudo apt purge ibus</code></li>
+</ol>
+<h2 id="包（软件）管理器"><a href="#包（软件）管理器" class="headerlink" title="包（软件）管理器"></a>包（软件）管理器</h2><h3 id="Snappy"><a href="#Snappy" class="headerlink" title="Snappy"></a>Snappy</h3><p>也就是<code>snap</code>， 用于<code>ubuntu</code>的包管理器。</p>
+<p><code>sudo apt install snapd</code></p>
+<h3 id="Flatpak"><a href="#Flatpak" class="headerlink" title="Flatpak"></a>Flatpak</h3><p>其本质是一个应用程序沙盒。但在实际使用中可以被视为一个包管理器。</p>
+<h3 id="AppImageLauncher"><a href="#AppImageLauncher" class="headerlink" title="AppImageLauncher"></a>AppImageLauncher</h3><p>AppImageLauncher 是用以管理 AppImage 的一个管理器。<br>可以在 Github 上<a target="_blank" rel="noopener" href="https://github.com/TheAssassin/AppImageLauncher/releases/tag/v2.2.0">下载</a>。</p>
+<h1 id="Ubuntu-Gnome-桌面美化"><a href="#Ubuntu-Gnome-桌面美化" class="headerlink" title="Ubuntu Gnome 桌面美化"></a>Ubuntu Gnome 桌面美化</h1><p>笔者曾经使用 Kubuntu 的 KDE Plasma 桌面。不可否认的是 KDE 桌面更为华丽。</p>
+<p>但是由于笔者的某些错误操作，导致 Kubuntu 删除了自己的桌面造成了……所以还是选择了Ubuntu</p>
+<p>作为一个开发者，或许过于华丽并非是必要的。</p>
+<p>但是 <strong>美观即是生产力</strong>， 对桌面的美化也是需要的，所以推荐以下几个软件。</p>
+<ul>
+<li>variety</li>
+<li>Gnome-Tweaks</li>
+<li>Gnome 插件</li>
+</ul>
+<h2 id="Variety"><a href="#Variety" class="headerlink" title="Variety"></a>Variety</h2><p><a target="_blank" rel="noopener" href="https://launchpad.net/variety">Variety</a> 是一个强大的桌面背景管理器。可以自动从图片源下载图片作为桌面背景。</p>
+<h3 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h3><p><code>sudo apt install variety</code></p>
+<h3 id="配置-1"><a href="#配置-1" class="headerlink" title="配置"></a>配置</h3><p>此软件是开箱即用的，并且支持中文。</p>
+<h2 id="Gnome-Tweaks"><a href="#Gnome-Tweaks" class="headerlink" title="Gnome-Tweaks"></a>Gnome-Tweaks</h2><p>执行<code>sudo apt install gnome-tweaks</code>安装。<br>可以修改 gnome 桌面的主题、图表、鼠标等等。</p>
+<h2 id="Gnome-插件"><a href="#Gnome-插件" class="headerlink" title="Gnome 插件"></a>Gnome 插件</h2><p>在 Chrome 或 Firefox 中可以下载 <code>GNOME Shell integration</code> 拓展，更方便的管理 Gnome</p>
+<p>访问：<br><a target="_blank" rel="noopener" href="https://extensions.gnome.org/">https://extensions.gnome.org/</a><br>以下载gnome插件。</p>
+<h3 id="插件推荐"><a href="#插件推荐" class="headerlink" title="插件推荐"></a>插件推荐</h3><ol>
+<li><code>Clipboard Indicator</code> 用于管理剪切板历史</li>
+<li><code>Dash to Dock</code> 替换原有的丑陋的dock栏（不过说实话还是很丑）</li>
+<li><code>Disconnect WiFi</code> 可以<code>断开WiFi链接</code></li>
+<li><code>GSConnect</code> 是<code>KDE Connect</code>的 <code>gnome</code> 实现，神器，在局域网中和安卓手机联动。安卓手机需要下载<code>KDE Connect</code></li>
+<li><code>Input Method Panel</code> 可以使<code>fcitx5</code>的<code>KDE</code>界面在<code>Gnome</code>下运行。</li>
+<li><code>Open Weather</code> 天气预报</li>
+<li><code>Recent Items</code> 最近打开的目录、文件</li>
+<li><code>Removable Drive Menu</code> 管理可移除设备（U盘、移动硬盘等）</li>
+<li><code>Sound Input &amp; Output Device Chooser</code> 管理声音输入输出设备</li>
+</ol>
+<h1 id="生产力-学习"><a href="#生产力-学习" class="headerlink" title="生产力 / 学习"></a>生产力 / 学习</h1><h2 id="Visual-Studio-Code"><a href="#Visual-Studio-Code" class="headerlink" title="Visual Studio Code"></a>Visual Studio Code</h2><p>不作介绍，下就完了。</p>
+<p><a target="_blank" rel="noopener" href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></p>
+<h3 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h3><p>个人认为 Linux 下配置环境比 windows 简单。<br>此处只写几个常用的环境。</p>
+<ol>
+<li>cpp<br>直接<code>sudo apt install gcc</code></li>
+<li>python<br>默认有python<br><em>tips: 默认是 python3, 开启 shell 需要执行 python3</em></li>
+</ol>
+<h2 id="Neovim"><a href="#Neovim" class="headerlink" title="Neovim"></a>Neovim</h2><p><code>sudo snap install neovim</code></p>
+<h2 id="Obsidian"><a href="#Obsidian" class="headerlink" title="Obsidian"></a>Obsidian</h2><p>一个支持 <strong>双向链接</strong>， 支持 <strong>Markdown</strong> 的编辑器。<br>很好用。<br>我将再写一个新的 blog 介绍这个软件。</p>
+<p>从官网<a target="_blank" rel="noopener" href="https://obsidian.md/">下载</a>。</p>
+<h2 id="Anki"><a href="#Anki" class="headerlink" title="Anki"></a>Anki</h2><p>一个卡片式的记忆记忆软件。网上的教程很多，我也有计划写一个新的 blog。</p>
+<p><code>sudo apt install anki</code></p>
+<h1 id="娱乐"><a href="#娱乐" class="headerlink" title="娱乐"></a>娱乐</h1><h2 id="网易云音乐"><a href="#网易云音乐" class="headerlink" title="网易云音乐"></a>网易云音乐</h2><p>网易云音乐官方提供<code>.deb</code>格式的安装包。<br><a target="_blank" rel="noopener" href="https://music.163.com/#/download">下载</a></p>
+<h2 id="Spotify"><a href="#Spotify" class="headerlink" title="Spotify"></a>Spotify</h2><p><code>snap install spotify</code></p>
+<h2 id="VLC-视频播放器"><a href="#VLC-视频播放器" class="headerlink" title="VLC 视频播放器"></a>VLC 视频播放器</h2><p><code>sudo snap install vlc</code></p>
+<h1 id="杂项"><a href="#杂项" class="headerlink" title="杂项"></a>杂项</h1><h2 id="Proxychains"><a href="#Proxychains" class="headerlink" title="Proxychains"></a>Proxychains</h2><p>使用 Proxychains 更好地配置代理。<br>某些情况下安装软件时并不能走系统代理。</p>
+<p><code>sudo apt install proxychains</code></p>
+<h3 id="配置-proxychains"><a href="#配置-proxychains" class="headerlink" title="配置 proxychains"></a>配置 proxychains</h3><p><code>vim /etc/proxychains.conf</code></p>
+<p>删除文件末尾的默认代理。</p>
+<p>在文件末尾加入：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">socks5 xxx.xxx.xxx.xxx xxxx</span><br></pre></td></tr></table></figure></p>
+<h2 id="qBittorrent"><a href="#qBittorrent" class="headerlink" title="qBittorrent"></a>qBittorrent</h2><p>p2p下载工具。</p>
+<p><code>sudo apt install qbittorrent</code></p>
+<h2 id="telegram"><a href="#telegram" class="headerlink" title="telegram"></a>telegram</h2><p><code>sudo snap install telegram-desktop</code></p>
+<h2 id="extract"><a href="#extract" class="headerlink" title="extract"></a>extract</h2><p>一个解压工具，不需要记忆那些奇奇怪怪的解压命令。<br><code>sudo apt install extract</code></p>
+<h2 id="syncthing"><a href="#syncthing" class="headerlink" title="syncthing"></a>syncthing</h2><p>去中心化的同步工具。</p>
+<p>官网有详细的<a target="_blank" rel="noopener" href="https://apt.syncthing.net/">教程</a>。</p>
+<h2 id="Send-Any-Where"><a href="#Send-Any-Where" class="headerlink" title="Send Any Where"></a>Send Any Where</h2><p><a target="_blank" rel="noopener" href="https://send-anywhere.com/">官网</a>。</p>
+<p>方便在设备之间传输文件。</p>
+<h2 id="Calibre"><a href="#Calibre" class="headerlink" title="Calibre"></a>Calibre</h2><p>一个电子书管理器。<br><code>sudo apt install calibre</code></p>
+<h2 id="Zathura"><a href="#Zathura" class="headerlink" title="Zathura"></a>Zathura</h2><p>一个pdf阅读器，支持<code>vim</code>的操作方式。</p>
+<p>使用 <code>vim</code> 写 $\LaTeX$时的好帮手。</p>
+<p><code>sudo apt install zathura</code></p>
+<h2 id="howdy"><a href="#howdy" class="headerlink" title="howdy"></a>howdy</h2><p>类似<code>Windows Hello</code>的人脸解锁工具。<br><a target="_blank" rel="noopener" href="https://github.com/boltgolt/howdy/releases">release</a></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/linux/" rel="tag"># linux</a>
+              <a href="/tags/ubuntu/" rel="tag"># ubuntu</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/11/29/ubuntu%E9%85%8D%E7%BD%AE%E5%AE%9E%E8%AE%B0/" rel="prev" title="ubuntu配置实记">
+      <i class="fa fa-chevron-left"></i> ubuntu配置实记
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E8%BD%AF%E4%BB%B6"><span class="nav-number">2.</span> <span class="nav-text">基础软件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Git"><span class="nav-number">2.1.</span> <span class="nav-text">Git</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">2.1.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE"><span class="nav-number">2.1.2.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Google-Chrome"><span class="nav-number">2.2.</span> <span class="nav-text">Google Chrome</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Fcitx5"><span class="nav-number">2.3.</span> <span class="nav-text">Fcitx5</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8C%85%EF%BC%88%E8%BD%AF%E4%BB%B6%EF%BC%89%E7%AE%A1%E7%90%86%E5%99%A8"><span class="nav-number">2.4.</span> <span class="nav-text">包（软件）管理器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Snappy"><span class="nav-number">2.4.1.</span> <span class="nav-text">Snappy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Flatpak"><span class="nav-number">2.4.2.</span> <span class="nav-text">Flatpak</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AppImageLauncher"><span class="nav-number">2.4.3.</span> <span class="nav-text">AppImageLauncher</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Ubuntu-Gnome-%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96"><span class="nav-number">3.</span> <span class="nav-text">Ubuntu Gnome 桌面美化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Variety"><span class="nav-number">3.1.</span> <span class="nav-text">Variety</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-1"><span class="nav-number">3.1.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-1"><span class="nav-number">3.1.2.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Gnome-Tweaks"><span class="nav-number">3.2.</span> <span class="nav-text">Gnome-Tweaks</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Gnome-%E6%8F%92%E4%BB%B6"><span class="nav-number">3.3.</span> <span class="nav-text">Gnome 插件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90"><span class="nav-number">3.3.1.</span> <span class="nav-text">插件推荐</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%94%9F%E4%BA%A7%E5%8A%9B-%E5%AD%A6%E4%B9%A0"><span class="nav-number">4.</span> <span class="nav-text">生产力 &#x2F; 学习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Visual-Studio-Code"><span class="nav-number">4.1.</span> <span class="nav-text">Visual Studio Code</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="nav-number">4.1.1.</span> <span class="nav-text">环境配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Neovim"><span class="nav-number">4.2.</span> <span class="nav-text">Neovim</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Obsidian"><span class="nav-number">4.3.</span> <span class="nav-text">Obsidian</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Anki"><span class="nav-number">4.4.</span> <span class="nav-text">Anki</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A8%B1%E4%B9%90"><span class="nav-number">5.</span> <span class="nav-text">娱乐</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90"><span class="nav-number">5.1.</span> <span class="nav-text">网易云音乐</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spotify"><span class="nav-number">5.2.</span> <span class="nav-text">Spotify</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VLC-%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8"><span class="nav-number">5.3.</span> <span class="nav-text">VLC 视频播放器</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9D%82%E9%A1%B9"><span class="nav-number">6.</span> <span class="nav-text">杂项</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Proxychains"><span class="nav-number">6.1.</span> <span class="nav-text">Proxychains</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-proxychains"><span class="nav-number">6.1.1.</span> <span class="nav-text">配置 proxychains</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#qBittorrent"><span class="nav-number">6.2.</span> <span class="nav-text">qBittorrent</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#telegram"><span class="nav-number">6.3.</span> <span class="nav-text">telegram</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#extract"><span class="nav-number">6.4.</span> <span class="nav-text">extract</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#syncthing"><span class="nav-number">6.5.</span> <span class="nav-text">syncthing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Send-Any-Where"><span class="nav-number">6.6.</span> <span class="nav-text">Send Any Where</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Calibre"><span class="nav-number">6.7.</span> <span class="nav-text">Calibre</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Zathura"><span class="nav-number">6.8.</span> <span class="nav-text">Zathura</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#howdy"><span class="nav-number">6.9.</span> <span class="nav-text">howdy</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">FinleyGe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/finleyge" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;finleyge" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:atlasgj@gmail.com" title="E-Mail → mailto:atlasgj@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">FinleyGe</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>
