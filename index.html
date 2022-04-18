@@ -164,6 +164,330 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/17/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E5%B8%B8%E7%94%A8%E5%85%AC%E5%BC%8F%E6%80%BB%E7%BB%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="FinleyGe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Finley's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/04/17/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E5%B8%B8%E7%94%A8%E5%85%AC%E5%BC%8F%E6%80%BB%E7%BB%93/" class="post-title-link" itemprop="url">离散数学-常用公式总结</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-04-17 16:45:31" itemprop="dateCreated datePublished" datetime="2022-04-17T16:45:31+08:00">2022-04-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-04-18 21:02:44" itemprop="dateModified" datetime="2022-04-18T21:02:44+08:00">2022-04-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/" itemprop="url" rel="index"><span itemprop="name">离散数学</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>只记录常用有用的公式。</p>
+<h1 id="等价式"><a href="#等价式" class="headerlink" title="等价式"></a>等价式</h1><ol>
+<li>交换率结合率分配率</li>
+<li>德·摩根率 $\neg(A\vee B) = \neg A \wedge \neg B, \neg(A \wedge B) = \neg A \vee \neg B$</li>
+<li>吸收率：$A\vee(A\wedge B) \Leftrightarrow A; A \wedge (A \vee B) \Leftrightarrow A$</li>
+<li>条件转化率：$P \to Q \Leftrightarrow \neg P \vee Q$</li>
+<li>双条件转化率：$P \leftrightarrow Q \Leftrightarrow (P \to Q) \wedge (Q \to P)$</li>
+<li>假言易位：$P\to Q \Leftrightarrow \neg Q \to \neg P$</li>
+<li>吸收律: $A\vee(A\wedge B) \Leftrightarrow A, A\wedge(A\vee B) \Leftrightarrow A$</li>
+<li>零律：$A \vee T \Leftrightarrow T, A\wedge F \Leftrightarrow F$</li>
+<li>同一律：$A\vee F \Leftrightarrow A, A \wedge T \Leftrightarrow A$</li>
+</ol>
+<h1 id="蕴含式"><a href="#蕴含式" class="headerlink" title="蕴含式"></a>蕴含式</h1><ol>
+<li>附加律 $A\Rightarrow A\vee B$</li>
+<li>合取式 $P,Q \Rightarrow P\wedge Q$</li>
+<li>化简律 $P \wedge Q \Rightarrow P$</li>
+<li>假言推理 $(A \to B) \wedge A \Rightarrow B$</li>
+<li>拒取式 $(A \to B)\wedge \neg B \Rightarrow \neg A$</li>
+<li>析取三段论 $(A \vee B) \wedge \neg B \Rightarrow B$</li>
+<li>假言三段论 $((A\to B) \wedge (B \to C)) \Rightarrow (A \to C)$</li>
+<li>构造性二难$((A \to B) \wedge (C \to D) \wedge (A \vee C) \Rightarrow (B \vee D))$</li>
+<li>破坏性二难$((A \to B) \wedge (C \to D) \wedge (\neg B \vee \neg D) \Rightarrow (\neg A \vee \neg C))$</li>
+</ol>
+<h1 id="量词"><a href="#量词" class="headerlink" title="量词"></a>量词</h1><ol>
+<li>量词否定转化率<script type="math/tex; mode=display">
+\begin{aligned}
+\neg \forall xP(x) \Leftrightarrow \exists x\neg P(x) \\
+\neg \exists xP(x) \Leftrightarrow  \forall x \neg P(x)
+\end{aligned}</script></li>
+<li>量词辖域收缩扩张等值式<script type="math/tex; mode=display">
+\begin{aligned}
+\forall x (A(x) \to B) \Leftrightarrow \forall x A(x) \to B \\
+\end{aligned}</script></li>
+</ol>
+<p>其他等值式并不常用.</p>
+<h1 id="谓词演算规则"><a href="#谓词演算规则" class="headerlink" title="谓词演算规则"></a>谓词演算规则</h1><p>这些规则都是蕴含式.(即$I$规则)</p>
+<ol>
+<li>全称制定规则 $US$<br>有两种情况, <script type="math/tex; mode=display">
+\begin{aligned}
+\forall x A(x) \Rightarrow A(c),\\
+\forall x A(x) \Rightarrow A(y)
+\end{aligned}</script></li>
+<li>全称推广规则 $UG$<script type="math/tex; mode=display">
+A(y) \Rightarrow \forall x A(x)</script></li>
+<li>存在指定规则 $ES$<script type="math/tex; mode=display">
+\exists x A(x) \Rightarrow A(c)</script></li>
+<li>存在推广定理 $EG$<script type="math/tex; mode=display">
+A(c) \Rightarrow \exists A(x)</script></li>
+</ol>
+<h1 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h1><h2 id="恒等式"><a href="#恒等式" class="headerlink" title="恒等式"></a>恒等式</h2><ol>
+<li>同一律 $A\cup \varnothing = A , A \cap E = A$</li>
+<li>零律 $A \cup E = E, A \cap \varnothing = A$</li>
+<li>排中律 $A \cup \sim A = E$</li>
+<li>矛盾律 $A \cap \sim A = \varnothing$</li>
+<li>吸收律 $A\cup(A\cap B) = A, A\cap(A\cup B) = A$</li>
+<li>德$\cdot$摩根律 $A - (B \cup C) = (A - B)\cap(A - C)$</li>
+<li>补交转换律$A - B = A \cap \sim B$</li>
+</ol>
+<h2 id="对称差有关公式"><a href="#对称差有关公式" class="headerlink" title="对称差有关公式"></a>对称差有关公式</h2><ol>
+<li>$A \cap (B\oplus C) = (A \cap B) \oplus (A \cap C)$</li>
+<li>$A \oplus \varnothing  = A, A \oplus E = \sim A, A \oplus A = \varnothing , A \oplus \sim A = E$</li>
+<li>$A \cup B = (A \cap \sim B) \cup (\sim A\cup B) \cup (A \cap B)$</li>
+<li>$A \cup B = (A \oplus B) \cup (A \cap B)$</li>
+</ol>
+<h2 id="关系有关公式"><a href="#关系有关公式" class="headerlink" title="关系有关公式"></a>关系有关公式</h2><ol>
+<li>$(R \cup S)^C = R^C \cup S^C$</li>
+<li>$(R \cap S)^C = R^C \cap S^C$</li>
+<li>$(R - S)^C = R^C - R^S$</li>
+<li>$(\sim R)^C = \sim R^C$</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/17/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E5%91%BD%E9%A2%98%E4%B8%8E%E8%B0%93%E8%AF%8D/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="FinleyGe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Finley's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/04/17/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E5%91%BD%E9%A2%98%E4%B8%8E%E8%B0%93%E8%AF%8D/" class="post-title-link" itemprop="url">离散数学-命题与谓词</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-04-17 16:40:03" itemprop="dateCreated datePublished" datetime="2022-04-17T16:40:03+08:00">2022-04-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-04-18 21:02:56" itemprop="dateModified" datetime="2022-04-18T21:02:56+08:00">2022-04-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/" itemprop="url" rel="index"><span itemprop="name">离散数学</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="命题逻辑"><a href="#命题逻辑" class="headerlink" title="命题逻辑"></a>命题逻辑</h1><h2 id="命题"><a href="#命题" class="headerlink" title="命题"></a>命题</h2><p>命题：存在<strong>唯一真值</strong>的<strong>陈述句</strong>。</p>
+<p>命题有<strong>真命题</strong>和<strong>假命题</strong>。</p>
+<p><strong>原子命题</strong>：不能再分解的命题。</p>
+<p>通过原子命题构成的命题是<strong>复合命题</strong>。</p>
+<p>为了表达复合命题，需要使用<strong>连接词</strong>。</p>
+<h2 id="连接词"><a href="#连接词" class="headerlink" title="连接词"></a>连接词</h2><p>连接词有五种：</p>
+<ul>
+<li>否定连接词: $\neg$</li>
+<li>合取连接词:$\wedge$</li>
+<li>析取连接词:$\vee$</li>
+<li>条件连接词: $A \to B$</li>
+<li>双条件联结词: $P\leftrightarrow Q$</li>
+</ul>
+<h3 id="最小全功能连接词"><a href="#最小全功能连接词" class="headerlink" title="最小全功能连接词"></a>最小全功能连接词</h3><h2 id="命题公式"><a href="#命题公式" class="headerlink" title="命题公式"></a>命题公式</h2><p>参考：<a target="_blank" rel="noopener" href="https://finleyge.github.io/2022/04/17/离散数学-常用公式总结/">离散数学-命题公式总结</a></p>
+<h3 id="命题公式的翻译"><a href="#命题公式的翻译" class="headerlink" title="命题公式的翻译"></a>命题公式的翻译</h3><p>注意几点：</p>
+<ol>
+<li><code>如果，那么</code>可以翻译为条件式</li>
+<li>注意异或(不可兼或): <code>要么是A要么是B</code>，（A和B不能同时成立）应当翻译为$\neg(A \leftrightarrow B)$</li>
+</ol>
+<h2 id="真值表"><a href="#真值表" class="headerlink" title="真值表"></a>真值表</h2><p>举例说明:<br>| $P$ | $Q$ | $\neg P$ | $\neg P \vee Q$ |<br>| —- | —- | ———— | ———————- |<br>| T   | T   | F        | T               |<br>| T   | F   | F        | F               |<br>| F   | T   | T        | T               |<br>| F   | F   | T        | T               |</p>
+<ul>
+<li><strong>成真指派</strong>使得命题公式$A$成真的一组真值指派为成真指派。</li>
+<li><p><strong>成假指派</strong>反之</p>
+</li>
+<li><p><strong>永真式</strong>：又称为<strong>重言式</strong>。对于任何指派都为真。</p>
+</li>
+<li><strong>永假式</strong>：又称为<strong>矛盾式</strong>。对于任何指派都为假。</li>
+<li><strong>可满足式</strong>：只要该式子不是矛盾式。 </li>
+</ul>
+<p><strong>等价</strong>: 给定两个命题公式$A$和$B$，如果对于任何真值指派，两个公式的真值都相同。那么称这两个公式为等价的。记作：</p>
+<script type="math/tex; mode=display">
+A \Leftrightarrow B</script><h2 id="对偶"><a href="#对偶" class="headerlink" title="对偶"></a>对偶</h2><p>连接词取反，特殊变元$T,F$也取反.</p>
+<h3 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h3><script type="math/tex; mode=display">
+\begin{aligned}
+\neg A(P_1, P_2, \cdots, P_n) &\Leftrightarrow A^*(\neg P_1, P_2,\cdots, P_n)
+\\
+A(P_1, P_2, \cdots, P_n) 
+&\Leftrightarrow 
+\neg A^*(\neg P_1, P_2,\cdots, P_n)
+\end{aligned}</script><h2 id="范式"><a href="#范式" class="headerlink" title="范式"></a>范式</h2><p><strong>合取范式</strong><br>形式:</p>
+<script type="math/tex; mode=display">
+A_1\wedge A_2 \wedge ... \wedge A_n</script><p>**析取范式</p>
+<script type="math/tex; mode=display">
+    A_1 \vee A_2 \vee \cdots \vee A_n</script><h3 id="范式存在定理"><a href="#范式存在定理" class="headerlink" title="范式存在定理"></a>范式存在定理</h3><p>任何命题公式都存在与其等值的析取范式和合取范式。<br><strong>构造法</strong>证明。（即构造一个范式）</p>
+<h3 id="小项-amp-大项"><a href="#小项-amp-大项" class="headerlink" title="小项&amp;大项"></a>小项&amp;大项</h3><h4 id="小项"><a href="#小项" class="headerlink" title="小项"></a>小项</h4><p>也叫<strong>布尔合取</strong>。n个文字的合取。<br>n个命题变元有$2^n$各小项。<br>将小项中命题变元原形对应为1， 否定形式对应为0<br>则每个小项对应一个二进制数。这个二进制数也是该小项的<strong>成真赋值</strong>。<br>二进制数也对应一个十进制数。<br>表现形式:$m_{111}$</p>
+<h4 id="大项"><a href="#大项" class="headerlink" title="大项"></a>大项</h4><p>也叫<strong>布尔析取</strong>。n个文字的析取。<br>原形对应为0, 否定对应为1<br>对应的二进制数是这个<strong>大项</strong>的<strong>成假赋值</strong>。<br>$M_{111}$</p>
+<h3 id="主合取范式-amp-主析取范式"><a href="#主合取范式-amp-主析取范式" class="headerlink" title="主合取范式 &amp; 主析取范式"></a>主合取范式 &amp; 主析取范式</h3><p><strong>主合取范式</strong>: 给定公式的等价公式, 仅由大项的合取形成.<br>可以记作:$\prod 1,2,3$<br><strong>主析取范式</strong>: 给定公式的等价公式, 仅由小项的析取形成.<br>可以记作:$\sum 1,2,3$</p>
+<p>二者可以通过<strong>演变法</strong>相互转换:<br>例如对于一个三元命题,共有$2^3 = 8$个项,则<br>$\sum 1,2,3 \Leftrightarrow  \prod 0,4,5,6,7$</p>
+<h4 id="解题方法"><a href="#解题方法" class="headerlink" title="解题方法"></a>解题方法</h4><ol>
+<li>化简原式, 做到:<ol>
+<li>只含有$\neg, \vee, \wedge$三个符号 </li>
+<li>适当添加括号,使得括号内和外的符号不同.</li>
+</ol>
+</li>
+<li>使用$R \vee \neg R \Leftrightarrow T$ 以及 $R \wedge \neg R \Leftrightarrow F$补项.</li>
+<li>运算,写出主析取或主合取范式</li>
+<li>演变写出另一个范式 </li>
+</ol>
+<h2 id="推理理论"><a href="#推理理论" class="headerlink" title="推理理论"></a>推理理论</h2><h3 id="蕴含"><a href="#蕴含" class="headerlink" title="蕴含"></a>蕴含</h3><p>当且仅当$P \to Q$为重言式, 称$P$蕴含$Q$, 记作$P \Rightarrow Q$<br>其中,$Q$是$P$的一个<strong>有效结论</strong>.<br>对于$P \to Q$<br>有<strong>反换式</strong>$\neg P \to \neg Q$<br>有<strong>逆换式</strong> $Q \to P$<br>有<strong>逆反式</strong>$\neg Q \to \neg P$</p>
+<blockquote>
+<p><strong>注意</strong>, 逆反式等价于原式.</p>
+</blockquote>
+<h3 id="证明有效结论"><a href="#证明有效结论" class="headerlink" title="证明有效结论"></a>证明有效结论</h3><p>有两种方法 </p>
+<h4 id="真值表法"><a href="#真值表法" class="headerlink" title="真值表法"></a>真值表法</h4><p>简单暴力,略.</p>
+<h4 id="直接证法"><a href="#直接证法" class="headerlink" title="直接证法"></a>直接证法</h4><p>通过<a href="常用的公式.md#蕴含式">蕴含式</a></p>
+<p><strong>P规则</strong>,用于引入前提.<br><strong>T规则</strong>,用于用于推导.</p>
+<h4 id="间接证法"><a href="#间接证法" class="headerlink" title="间接证法"></a>间接证法</h4><h5 id="反证法-归谬法"><a href="#反证法-归谬法" class="headerlink" title="反证法(归谬法)"></a>反证法(归谬法)</h5><p>把结论的否定当作附加条件与给定的前提一起论证, 推导出矛盾则可证明原结果有效.</p>
+<h5 id="CP规则"><a href="#CP规则" class="headerlink" title="CP规则"></a>CP规则</h5><p>如果要证明</p>
+<script type="math/tex; mode=display">
+H_1 \wedge H_2 \wedge \cdots \wedge H_m \Rightarrow (R \to C)</script><p>设$A = H_1 \wedge H_2 \wedge \cdots \wedge H_m$<br>将$R$作为附加条件,与$A$一起论证$A \wedge R \Rightarrow C$则可证明原命题有效.</p>
+<h1 id="谓词逻辑"><a href="#谓词逻辑" class="headerlink" title="谓词逻辑"></a>谓词逻辑</h1><p>在命题逻辑中, <strong>命题</strong>是最基本的单位.<br>在谓词演算中,可将命题进一步分解为<strong>谓词</strong>和<strong>客体</strong>两部分.</p>
+<h2 id="命题函数"><a href="#命题函数" class="headerlink" title="命题函数"></a>命题函数</h2><p>一般用大写字母表示谓词.<br>用小写字母表示客体<br>其中$a,b,c$等用以表示常元.<br>用$x,y,z$表示变元.</p>
+<p><strong>注意</strong>:客体的顺序一般是不能变换的.$A(a,b) \ne A(b,a)$</p>
+<p>用谓词和命题变元组成的表达式是<strong>命题函数</strong><br>多个命题函数用连接词连接,则为<strong>复合命题函数</strong></p>
+<h2 id="量词"><a href="#量词" class="headerlink" title="量词"></a>量词</h2><p>全称量词: 任意的,所有的. $\forall$</p>
+<p>存在量词: 存在, $\exists$</p>
+<h2 id="谓词公式的翻译"><a href="#谓词公式的翻译" class="headerlink" title="谓词公式的翻译"></a>谓词公式的翻译</h2><h3 id="翻译"><a href="#翻译" class="headerlink" title="翻译"></a>翻译</h3><p>有两种基本模式:</p>
+<ul>
+<li>$\forall x(Q(x) \to R(x))$</li>
+<li>$\exists x(Q(x)\wedge P(x))$</li>
+</ul>
+<h3 id="辖域"><a href="#辖域" class="headerlink" title="辖域"></a>辖域</h3><p>即量词的作用域.<br>在作用域内的变元称为<strong>约束变元</strong>,否则称为<strong>自由变元</strong></p>
+<h3 id="换名"><a href="#换名" class="headerlink" title="换名"></a>换名</h3><p>可以对约束变元进行换名.</p>
+<ol>
+<li>指导变元和作用域内变元都需要换名.</li>
+<li>不能使用已经使用的名称.</li>
+</ol>
+<h3 id="带入"><a href="#带入" class="headerlink" title="带入"></a>带入</h3><p>可以对自由变元”代入”.</p>
+<ol>
+<li>应当对命题中出现的所有都要代入.</li>
+<li>不能使用已经使用的名称.</li>
+</ol>
+<h3 id="前束范式"><a href="#前束范式" class="headerlink" title="前束范式"></a>前束范式</h3><p>量词全部在全式的开头.</p>
+<p><strong>注意</strong><br>去掉量词后, 所有之前的推理公式都可以正常使用.<br>所以正常的解题步骤为:</p>
+<ol>
+<li>化为前束范式</li>
+<li>去掉量词</li>
+<li>推理</li>
+<li>加上量词</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/16/%E3%80%8A%E7%BD%97%E7%B4%A0%E8%87%AA%E4%BC%A0%E3%80%8B%E7%AC%AC%E4%B8%80%E5%8D%B7-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1108,192 +1432,6 @@ Viewmodel又成为binder 即 绑定器.
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/28/go%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="FinleyGe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Finley's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/28/go%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">Golang 学习笔记</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-28 12:10:16" itemprop="dateCreated datePublished" datetime="2021-09-28T12:10:16+08:00">2021-09-28</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-03-13 10:59:00" itemprop="dateModified" datetime="2022-03-13T10:59:00+08:00">2022-03-13</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Go语言概述"><a href="#Go语言概述" class="headerlink" title="Go语言概述"></a>Go语言概述</h1><p>Golang 是 Google 开发的编程语言：<br>特性：</p>
-<ul>
-<li>静态强类型</li>
-<li>编译型</li>
-<li>并发型</li>
-<li>具有垃圾回收功能</li>
-</ul>
-<h1 id="Go语言语法的强制性"><a href="#Go语言语法的强制性" class="headerlink" title="Go语言语法的强制性"></a>Go语言语法的强制性</h1><ol>
-<li>Go 语言没有行分割符（也即没有分号）</li>
-<li>前花括号不能单独成行</li>
-<li></li>
-</ol>
-<h1 id="Go-语言结构"><a href="#Go-语言结构" class="headerlink" title="Go 语言结构"></a>Go 语言结构</h1><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;fmt&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">   <span class="comment">/* 这是我的第一个简单的程序 */</span></span><br><span class="line">   fmt.Println(<span class="string">&quot;Hello, World!&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>六个结构：</p>
-<ol>
-<li>声明包名, 每个 Go 应用程序都需要一个名为 main 的包</li>
-<li>引入包</li>
-<li>函数声明</li>
-<li>注释</li>
-<li>变量</li>
-<li>语句</li>
-</ol>
-<h1 id="Go语言变量"><a href="#Go语言变量" class="headerlink" title="Go语言变量"></a>Go语言变量</h1><p>Go 语言变量是强类型的。</p>
-<h2 id="变量声明"><a href="#变量声明" class="headerlink" title="变量声明"></a>变量声明</h2><p>通过下述语句声明一个变量<br><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> name typename = value</span><br></pre></td></tr></table></figure><br>可以声明多个变量<br><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></p>
-<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><h1 id="Go-语言控制语句"><a href="#Go-语言控制语句" class="headerlink" title="Go 语言控制语句"></a>Go 语言控制语句</h1><h2 id="条件控制语句"><a href="#条件控制语句" class="headerlink" title="条件控制语句"></a>条件控制语句</h2><h2 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h2><h1 id="Go-语言函数"><a href="#Go-语言函数" class="headerlink" title="Go 语言函数"></a>Go 语言函数</h1><h1 id="Go-面向对象（-）"><a href="#Go-面向对象（-）" class="headerlink" title="Go 面向对象（?）"></a>Go 面向对象（?）</h1><h1 id="Go"><a href="#Go" class="headerlink" title="Go"></a>Go</h1><h1 id="Go-语言"><a href="#Go-语言" class="headerlink" title="Go 语言"></a>Go 语言</h1>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/21/dart%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88Iterable%EF%BC%89/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="FinleyGe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Finley's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/21/dart%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88Iterable%EF%BC%89/" class="post-title-link" itemprop="url">dart学习笔记（Iterable）</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-21 16:04:52" itemprop="dateCreated datePublished" datetime="2021-09-21T16:04:52+08:00">2021-09-21</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-03-13 10:59:00" itemprop="dateModified" datetime="2022-03-13T10:59:00+08:00">2022-03-13</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%BC%96%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">编程</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%BC%96%E7%A8%8B/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%BC%96%E7%A8%8B/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/dart/" itemprop="url" rel="index"><span itemprop="name">dart</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="Iterable-可迭代类"><a href="#Iterable-可迭代类" class="headerlink" title="Iterable(可迭代类)"></a>Iterable(可迭代类)</h2><p><strong>Iterable</strong><sup><a href="#fn_1" id="reffn_1">1</a></sup>是一个<strong>Collection</strong>，是一个抽象类，表示一组可以依次访问(access sequentially)的对象。</p>
-<h3 id="Iterable是一个Collection"><a href="#Iterable是一个Collection" class="headerlink" title="Iterable是一个Collection"></a>Iterable是一个Collection</h3><p>Collection是一个<strong>对象</strong>，它表示一组对象（称之为<strong>元素</strong>）。<br>Iterable是一种Collection。</p>
-<p>常见的三种Collection</p>
-<ol>
-<li>List</li>
-<li>Set,（不重复）</li>
-<li>Map（ Key-Value）</li>
-</ol>
-<h3 id="Iterable是一个抽象类"><a href="#Iterable是一个抽象类" class="headerlink" title="Iterable是一个抽象类"></a>Iterable是一个抽象类</h3><p>换言之，我们不能实例化Iterable，但是我们可以借由List和Set实现对Iterable的实例化。<br>List和Set派生自Iterable，而Map则不然。但是我们可以通过正确的使用Map的values（entries）从而以Iterable的方式读取Map。<br><!-- ? 以什么方式呢？ --></p>
-<h3 id="Iterable"><a href="#Iterable" class="headerlink" title="Iterable"></a>Iterable</h3><p>与List不同，用index访问Iterable并不保证是高效的。</p>
-<p>Iterable原生没有“[ ]”操作符，可以使用elementAt()。</p>
-<h3 id="访问Iterable"><a href="#访问Iterable" class="headerlink" title="访问Iterable"></a>访问Iterable</h3><h6 id="1-使用for-in循环"><a href="#1-使用for-in循环" class="headerlink" title="1. 使用for-in循环"></a>1. 使用for-in循环</h6><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> iterable = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> element <span class="keyword">in</span> iterable) &#123;</span><br><span class="line">    <span class="built_in">print</span>(element);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h6 id="2-使用first-和last"><a href="#2-使用first-和last" class="headerlink" title="2. 使用first 和last"></a>2. 使用first 和last</h6><p>类似C++，first是第一个元素，last是最后的元素。<br>注意：last需要访问前面的所有元素，所以在较大的iterable时，last可能是慢的。</p>
-<h6 id="3-使用firstWhere"><a href="#3-使用firstWhere" class="headerlink" title="3. 使用firstWhere"></a>3. 使用firstWhere</h6><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">String</span> element = iterable.firstWhere((element) =&gt; element.length &gt; <span class="number">5</span>);</span><br></pre></td></tr></table></figure>
-<p>firstWhere的参数是一个函数。<br>注意：<br>=&gt;（箭头符）相当于return</p>
-<h3 id="检查元素"><a href="#检查元素" class="headerlink" title="检查元素"></a>检查元素</h3><p>any 和 every<br><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (items.any((item) =&gt; item.contains(<span class="string">&#x27;a&#x27;</span>))) &#123;</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;At least one item contains &quot;a&quot;&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (items.every((item) =&gt; item.length &gt;= <span class="number">5</span>)) &#123;</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;All items have length &gt;= 5&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>any： iterable中有一个元素符合条件<br>every： iterable中所有元素符合条件</p>
-<h3 id="过滤"><a href="#过滤" class="headerlink" title="过滤"></a>过滤</h3>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1363,20 +1501,20 @@ Viewmodel又成为binder 即 绑定器.
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">19</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-count">16</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-count">26</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>

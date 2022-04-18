@@ -164,6 +164,192 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/28/go%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="FinleyGe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Finley's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/09/28/go%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">Golang 学习笔记</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-09-28 12:10:16" itemprop="dateCreated datePublished" datetime="2021-09-28T12:10:16+08:00">2021-09-28</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-03-13 10:59:00" itemprop="dateModified" datetime="2022-03-13T10:59:00+08:00">2022-03-13</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Go语言概述"><a href="#Go语言概述" class="headerlink" title="Go语言概述"></a>Go语言概述</h1><p>Golang 是 Google 开发的编程语言：<br>特性：</p>
+<ul>
+<li>静态强类型</li>
+<li>编译型</li>
+<li>并发型</li>
+<li>具有垃圾回收功能</li>
+</ul>
+<h1 id="Go语言语法的强制性"><a href="#Go语言语法的强制性" class="headerlink" title="Go语言语法的强制性"></a>Go语言语法的强制性</h1><ol>
+<li>Go 语言没有行分割符（也即没有分号）</li>
+<li>前花括号不能单独成行</li>
+<li></li>
+</ol>
+<h1 id="Go-语言结构"><a href="#Go-语言结构" class="headerlink" title="Go 语言结构"></a>Go 语言结构</h1><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;fmt&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">   <span class="comment">/* 这是我的第一个简单的程序 */</span></span><br><span class="line">   fmt.Println(<span class="string">&quot;Hello, World!&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>六个结构：</p>
+<ol>
+<li>声明包名, 每个 Go 应用程序都需要一个名为 main 的包</li>
+<li>引入包</li>
+<li>函数声明</li>
+<li>注释</li>
+<li>变量</li>
+<li>语句</li>
+</ol>
+<h1 id="Go语言变量"><a href="#Go语言变量" class="headerlink" title="Go语言变量"></a>Go语言变量</h1><p>Go 语言变量是强类型的。</p>
+<h2 id="变量声明"><a href="#变量声明" class="headerlink" title="变量声明"></a>变量声明</h2><p>通过下述语句声明一个变量<br><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> name typename = value</span><br></pre></td></tr></table></figure><br>可以声明多个变量<br><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></p>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><h1 id="Go-语言控制语句"><a href="#Go-语言控制语句" class="headerlink" title="Go 语言控制语句"></a>Go 语言控制语句</h1><h2 id="条件控制语句"><a href="#条件控制语句" class="headerlink" title="条件控制语句"></a>条件控制语句</h2><h2 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h2><h1 id="Go-语言函数"><a href="#Go-语言函数" class="headerlink" title="Go 语言函数"></a>Go 语言函数</h1><h1 id="Go-面向对象（-）"><a href="#Go-面向对象（-）" class="headerlink" title="Go 面向对象（?）"></a>Go 面向对象（?）</h1><h1 id="Go"><a href="#Go" class="headerlink" title="Go"></a>Go</h1><h1 id="Go-语言"><a href="#Go-语言" class="headerlink" title="Go 语言"></a>Go 语言</h1>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/21/dart%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88Iterable%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="FinleyGe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Finley's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/09/21/dart%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88Iterable%EF%BC%89/" class="post-title-link" itemprop="url">dart学习笔记（Iterable）</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-09-21 16:04:52" itemprop="dateCreated datePublished" datetime="2021-09-21T16:04:52+08:00">2021-09-21</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-04-17 16:46:42" itemprop="dateModified" datetime="2022-04-17T16:46:42+08:00">2022-04-17</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%BC%96%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">编程</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%BC%96%E7%A8%8B/dart/" itemprop="url" rel="index"><span itemprop="name">dart</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="Iterable-可迭代类"><a href="#Iterable-可迭代类" class="headerlink" title="Iterable(可迭代类)"></a>Iterable(可迭代类)</h2><p><strong>Iterable</strong><sup><a href="#fn_1" id="reffn_1">1</a></sup>是一个<strong>Collection</strong>，是一个抽象类，表示一组可以依次访问(access sequentially)的对象。</p>
+<h3 id="Iterable是一个Collection"><a href="#Iterable是一个Collection" class="headerlink" title="Iterable是一个Collection"></a>Iterable是一个Collection</h3><p>Collection是一个<strong>对象</strong>，它表示一组对象（称之为<strong>元素</strong>）。<br>Iterable是一种Collection。</p>
+<p>常见的三种Collection</p>
+<ol>
+<li>List</li>
+<li>Set,（不重复）</li>
+<li>Map（ Key-Value）</li>
+</ol>
+<h3 id="Iterable是一个抽象类"><a href="#Iterable是一个抽象类" class="headerlink" title="Iterable是一个抽象类"></a>Iterable是一个抽象类</h3><p>换言之，我们不能实例化Iterable，但是我们可以借由List和Set实现对Iterable的实例化。<br>List和Set派生自Iterable，而Map则不然。但是我们可以通过正确的使用Map的values（entries）从而以Iterable的方式读取Map。<br><!-- ? 以什么方式呢？ --></p>
+<h3 id="Iterable"><a href="#Iterable" class="headerlink" title="Iterable"></a>Iterable</h3><p>与List不同，用index访问Iterable并不保证是高效的。</p>
+<p>Iterable原生没有“[ ]”操作符，可以使用elementAt()。</p>
+<h3 id="访问Iterable"><a href="#访问Iterable" class="headerlink" title="访问Iterable"></a>访问Iterable</h3><h6 id="1-使用for-in循环"><a href="#1-使用for-in循环" class="headerlink" title="1. 使用for-in循环"></a>1. 使用for-in循环</h6><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> iterable = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> element <span class="keyword">in</span> iterable) &#123;</span><br><span class="line">    <span class="built_in">print</span>(element);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h6 id="2-使用first-和last"><a href="#2-使用first-和last" class="headerlink" title="2. 使用first 和last"></a>2. 使用first 和last</h6><p>类似C++，first是第一个元素，last是最后的元素。<br>注意：last需要访问前面的所有元素，所以在较大的iterable时，last可能是慢的。</p>
+<h6 id="3-使用firstWhere"><a href="#3-使用firstWhere" class="headerlink" title="3. 使用firstWhere"></a>3. 使用firstWhere</h6><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">String</span> element = iterable.firstWhere((element) =&gt; element.length &gt; <span class="number">5</span>);</span><br></pre></td></tr></table></figure>
+<p>firstWhere的参数是一个函数。<br>注意：<br>=&gt;（箭头符）相当于return</p>
+<h3 id="检查元素"><a href="#检查元素" class="headerlink" title="检查元素"></a>检查元素</h3><p>any 和 every<br><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (items.any((item) =&gt; item.contains(<span class="string">&#x27;a&#x27;</span>))) &#123;</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;At least one item contains &quot;a&quot;&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (items.every((item) =&gt; item.length &gt;= <span class="number">5</span>)) &#123;</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;All items have length &gt;= 5&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>any： iterable中有一个元素符合条件<br>every： iterable中所有元素符合条件</p>
+<h3 id="过滤"><a href="#过滤" class="headerlink" title="过滤"></a>过滤</h3>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/12/gRPC%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1608,20 +1794,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">19</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-count">16</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-count">26</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
