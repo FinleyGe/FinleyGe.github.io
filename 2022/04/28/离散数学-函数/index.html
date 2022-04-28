@@ -20,15 +20,21 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Finley&#39;s Blog">
-<meta property="og:url" content="http://example.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
+  <meta name="description" content="设$X$和$Y$是任何两个集合,$f$是 $X$ 到 $Y$ 的一个关系, 如果对于每一个$x \in X$有唯一的 $y \in Y$使得$ \in f$,称关系$f$为$X$到$Y$的函数,记作$f:X \to Y$ 函数, 也称映射, 变换.$x$是自变元, $y$为像.函数的两个条件:存在性: 定义域$domf$中每个元素均有像, 即 $domf &#x3D; X$唯一性: 每个函数只有一个像, 且">
+<meta property="og:type" content="article">
+<meta property="og:title" content="离散数学-函数">
+<meta property="og:url" content="http://example.com/2022/04/28/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E5%87%BD%E6%95%B0/index.html">
 <meta property="og:site_name" content="Finley&#39;s Blog">
+<meta property="og:description" content="设$X$和$Y$是任何两个集合,$f$是 $X$ 到 $Y$ 的一个关系, 如果对于每一个$x \in X$有唯一的 $y \in Y$使得$ \in f$,称关系$f$为$X$到$Y$的函数,记作$f:X \to Y$ 函数, 也称映射, 变换.$x$是自变元, $y$为像.函数的两个条件:存在性: 定义域$domf$中每个元素均有像, 即 $domf &#x3D; X$唯一性: 每个函数只有一个像, 且">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-04-28T11:15:58.000Z">
+<meta property="article:modified_time" content="2022-04-28T11:19:49.396Z">
 <meta property="article:author" content="FinleyGe">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="离散数学">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+<link rel="canonical" href="http://example.com/2022/04/28/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E5%87%BD%E6%95%B0/">
 
 
 <script id="page-configurations">
@@ -36,12 +42,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>分类: 学习笔记 | Finley's Blog</title>
+  <title>离散数学-函数 | Finley's Blog</title>
   
 
 
@@ -158,154 +164,106 @@
         <div class="content-wrap">
           
 
-          <div class="content category">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">学习笔记
-          <small>分类</small>
-        </h2>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/28/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E5%87%BD%E6%95%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="FinleyGe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Finley's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          离散数学-函数
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-04-28 19:15:58 / 修改时间：19:19:49" itemprop="dateCreated datePublished" datetime="2022-04-28T19:15:58+08:00">2022-04-28</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/" itemprop="url" rel="index"><span itemprop="name">离散数学</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2022</span>
-    </div>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-04-28T19:15:58+08:00"
-              content="2022-04-28">
-          04-28
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/04/28/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E5%87%BD%E6%95%B0/" itemprop="url">
-            <span itemprop="name">离散数学-函数</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-04-18T22:34:54+08:00"
-              content="2022-04-18">
-          04-18
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/04/18/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-Floyd-Warshall%E7%AE%97%E6%B3%95/" itemprop="url">
-            <span itemprop="name">离散数学-Floyd-Warshall算法</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-04-18T22:28:56+08:00"
-              content="2022-04-18">
-          04-18
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/04/18/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E9%9B%86%E5%90%88/" itemprop="url">
-            <span itemprop="name">离散数学-集合</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-04-17T16:45:31+08:00"
-              content="2022-04-17">
-          04-17
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/04/17/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E5%B8%B8%E7%94%A8%E5%85%AC%E5%BC%8F%E6%80%BB%E7%BB%93/" itemprop="url">
-            <span itemprop="name">离散数学-常用公式总结</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-04-17T16:40:03+08:00"
-              content="2022-04-17">
-          04-17
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/04/17/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E5%91%BD%E9%A2%98%E4%B8%8E%E8%B0%93%E8%AF%8D/" itemprop="url">
-            <span itemprop="name">离散数学-命题与谓词</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-    <div class="collection-year">
-      <span class="collection-header">2021</span>
-    </div>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-09-21T16:04:52+08:00"
-              content="2021-09-21">
-          09-21
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/09/21/dart%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88Iterable%EF%BC%89/" itemprop="url">
-            <span itemprop="name">dart学习笔记（Iterable）</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
+        <p>设$X$和$Y$是任何两个集合,<br>$f$是 $X$ 到 $Y$ 的一个关系, 如果对于<strong>每一个</strong>$x \in X$有<strong>唯一的</strong> $y \in Y$使得$<x,y> \in f$,称关系$f$为$X$到$Y$的函数,记作<br>$f:X \to Y$</p>
+<p>函数, 也称<strong>映射, 变换</strong>.<br>$x$是自变元, $y$为像.<br>函数的两个条件:<br><strong>存在性</strong>: 定义域$domf$中每个元素均有像, 即 $domf = X$<br><strong>唯一性</strong>: 每个函数只有一个像, 且$ranf \subseteq Y$</p>
+<p><strong>函数相等</strong>:<br>对于函数$f,g$</p>
+<ol>
+<li>$domf = domg$</li>
+<li>$\forall x\in domf = domg$都有$f(x) = g(x)$</li>
+</ol>
+<p>$X \times Y$的子集并不都能成为$X$到$Y$的函数.<br>设$X$和$Y$都是有限集, $|X|=m,|Y|=n$<br>有$n^m$个不同的函数.(有$m^n$个不同的关系)<br>用$Y^X$表示所有函数的集合.</p>
+<h2 id="函数的性质"><a href="#函数的性质" class="headerlink" title="函数的性质"></a>函数的性质</h2><p><strong>满射</strong><br>不存在多余的$y\in Y$</p>
+<p><strong>单射</strong><br>不存在多对一.<br><strong>双射</strong><br>即满射+单射 = 双射.</p>
+<h2 id="逆函数"><a href="#逆函数" class="headerlink" title="逆函数"></a>逆函数</h2><p>双射函数有逆函数.<br>记作$f^{-1}$</p>
+<h2 id="函数的复合"><a href="#函数的复合" class="headerlink" title="函数的复合"></a>函数的复合</h2><p>$g \circ f(x) = g(f(x))$<br><strong>注意</strong>:和关系正好相反.<br>函数的复合是<strong>左复合</strong><br>关系的复合是<strong>右复合</strong></p>
+<h2 id="特殊的函数"><a href="#特殊的函数" class="headerlink" title="特殊的函数"></a>特殊的函数</h2><p><strong>常函数</strong>: $f(X) = {y_0}$<br><strong>恒等函数</strong>: $I_x : X \to X$</p>
 
     </div>
-  </div>
-  
-  
-  
 
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag"># 笔记</a>
+              <a href="/tags/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/" rel="tag"># 离散数学</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/04/20/%E3%80%8C%E4%B9%A6%E6%91%98%E3%80%8D%E7%90%BC%E7%BE%8E%E5%8D%A1%E9%9A%8F%E6%83%B3%E5%BD%95/" rel="prev" title="「书摘」琼美卡随想录">
+      <i class="fa fa-chevron-left"></i> 「书摘」琼美卡随想录
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
 
@@ -358,6 +316,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="nav-number">1.</span> <span class="nav-text">函数的性质</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%86%E5%87%BD%E6%95%B0"><span class="nav-number">2.</span> <span class="nav-text">逆函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E7%9A%84%E5%A4%8D%E5%90%88"><span class="nav-number">3.</span> <span class="nav-text">函数的复合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E7%9A%84%E5%87%BD%E6%95%B0"><span class="nav-number">4.</span> <span class="nav-text">特殊的函数</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
