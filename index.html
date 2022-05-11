@@ -164,6 +164,84 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/11/%E5%8D%87%E7%BA%A7%E5%88%B0Ubuntu22-04LTS%E5%90%8E%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="FinleyGe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Finley's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/05/11/%E5%8D%87%E7%BA%A7%E5%88%B0Ubuntu22-04LTS%E5%90%8E%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">升级到Ubuntu22.04LTS后遇到的问题</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-05-11 16:16:26 / 修改时间：16:17:58" itemprop="dateCreated datePublished" datetime="2022-05-11T16:16:26+08:00">2022-05-11</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%90%9E%E6%9C%BA/" itemprop="url" rel="index"><span itemprop="name">搞机</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Variety-in-Ubuntu-22-04-LTS"><a href="#Variety-in-Ubuntu-22-04-LTS" class="headerlink" title="Variety in Ubuntu 22.04 LTS"></a>Variety in Ubuntu 22.04 LTS</h1><p>最近把Ubuntu升级到了 22.04 LTS, 有一说一比之前的改变有很多。<br>暂时没有遇到什么恶性的bug， 使用体验良好。</p>
+<h1 id="如何更新到22-04？"><a href="#如何更新到22-04？" class="headerlink" title="如何更新到22.04？"></a>如何更新到22.04？</h1><p>如何更新到22.04呢？<br>在执行更新以前，强烈建议备份您的<strong>重要数据</strong>。<br>在Terminal中执行：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install update-manager-core</span><br><span class="line">sudo apt do-release-upgrade</span><br></pre></td></tr></table></figure><br>由于网速等原因，更新过程用时不等。（笔者软件源为中科大软件源，整个更新过程大约一个小时）</p>
+<h1 id="更新完成后遇到的问题"><a href="#更新完成后遇到的问题" class="headerlink" title="更新完成后遇到的问题"></a>更新完成后遇到的问题</h1><h2 id="1-我的-gnome-插件去哪了？"><a href="#1-我的-gnome-插件去哪了？" class="headerlink" title="1. 我的 gnome 插件去哪了？"></a>1. 我的 gnome 插件去哪了？</h2><p>由于更新到了 gnome 42，原先安装的插件可能不能支持（包括dash to dock，不过gnome 42的自带dock比之前好看太多）。<br>需要重新安装：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install gnome-shell-extensions</span><br></pre></td></tr></table></figure><br>并在浏览器插件或gnome-tweak中重新开启插件。</p>
+<h3 id="dock"><a href="#dock" class="headerlink" title="dock"></a>dock</h3><p>原先使用的<code>dash to dock</code>还没有更新到gnome42版本，但是自带的ubuntu dock有了更新</p>
+<p>可以在设置-外观中调整dock的样式，还是相对美观的。<br><img src="images/7d8ed85c2592c5a9d3385a8924550f12887889bf959d40701c28481230baa5de.png" alt="Ubuntu dock">  </p>
+<h2 id="2-howdy-失效"><a href="#2-howdy-失效" class="headerlink" title="2. howdy 失效"></a>2. howdy 失效</h2><p>可以选择重新安装。<br>（使用ppa安装需要重新配置ppa）</p>
+<h2 id="3-variety-失效"><a href="#3-variety-失效" class="headerlink" title="3. variety 失效"></a>3. variety 失效</h2><p>需要修改script文件<br>可以直接执行：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -i <span class="string">&#x27;/^# Gnome 3, Unity*/a gsettings set org.gnome.desktop.background picture-uri-dark &quot;file://$WP&quot; 2&gt; /dev/null&#x27;</span> /home/<span class="variable">$USER</span>/.config/variety/scripts/set_wallpaper</span><br></pre></td></tr></table></figure>
+<p>参考：<a target="_blank" rel="noopener" href="https://askubuntu.com/a/1404593/1594664">https://askubuntu.com/a/1404593/1594664</a></p>
+<p>(P.S 国外dalao牛的啊)</p>
+<h2 id="4-更新到最新的显卡驱动"><a href="#4-更新到最新的显卡驱动" class="headerlink" title="4. 更新到最新的显卡驱动"></a>4. 更新到最新的显卡驱动</h2><p>通过<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ubuntu-drivers devices</span><br></pre></td></tr></table></figure><br>查看显卡驱动推荐版本<br>在21.10, 我的推荐版本是440<br>但是现在是510，执行：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install nvidia-driver-510</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/28/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E5%87%BD%E6%95%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1202,7 +1280,7 @@ H_1 \wedge H_2 \wedge \cdots \wedge H_m \Rightarrow (R \to C)</script><p>设$A =
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-04-12 16:37:45" itemprop="dateModified" datetime="2022-04-12T16:37:45+08:00">2022-04-12</time>
+                <time title="修改时间：2022-05-10 23:27:18" itemprop="dateModified" datetime="2022-05-10T23:27:18+08:00">2022-05-10</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1312,86 +1390,6 @@ H_1 \wedge H_2 \wedge \cdots \wedge H_m \Rightarrow (R \to C)</script><p>设$A =
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/31/python%E4%B9%A0%E9%A2%98%E8%A7%A3%E6%9E%9002/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="FinleyGe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Finley's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/10/31/python%E4%B9%A0%E9%A2%98%E8%A7%A3%E6%9E%9002/" class="post-title-link" itemprop="url">python习题解析02</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-10-31 18:45:18" itemprop="dateCreated datePublished" datetime="2021-10-31T18:45:18+08:00">2021-10-31</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-03-13 10:59:00" itemprop="dateModified" datetime="2022-03-13T10:59:00+08:00">2022-03-13</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E4%B9%A0%E9%A2%98%E8%A7%A3%E6%9E%90/" itemprop="url" rel="index"><span itemprop="name">习题解析</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Python-习题解析-02"><a href="#Python-习题解析-02" class="headerlink" title="Python 习题解析 02"></a>Python 习题解析 02</h1><p>解析第三次上机作业</p>
-<h2 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">aDict = &#123;</span><br><span class="line">        <span class="string">&#x27;张三&#x27;</span>: <span class="number">76</span>,</span><br><span class="line">        <span class="string">&#x27;李四&#x27;</span>: <span class="number">45</span>,</span><br><span class="line">        <span class="string">&#x27;王五&#x27;</span>: <span class="number">83</span>,</span><br><span class="line">        <span class="string">&#x27;赵六&#x27;</span>: <span class="number">66</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Task A</span></span><br><span class="line">d = &#123;</span><br><span class="line">        <span class="string">&#x27;钱七&#x27;</span>: <span class="number">90</span>,</span><br><span class="line">        <span class="string">&#x27;郑八&#x27;</span>: <span class="number">91</span>,</span><br><span class="line">&#125;</span><br><span class="line">aDict.update(d)</span><br><span class="line"><span class="built_in">print</span>(aDict)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Task B</span></span><br><span class="line">aDict[<span class="string">&#x27;李四&#x27;</span>] = <span class="number">60</span></span><br><span class="line"><span class="built_in">print</span>(aDict)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Task C</span></span><br><span class="line">aDict.pop(<span class="string">&#x27;赵六&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(aDict)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Task D</span></span><br><span class="line"><span class="built_in">print</span>(aDict.keys())</span><br><span class="line"></span><br><span class="line"><span class="comment"># Task E</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> aDict.items():</span><br><span class="line">    aDict[i[<span class="number">0</span>]] += <span class="number">5</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(aDict)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Task F</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">sorted</span>(aDict.items(), key = <span class="keyword">lambda</span> kv : (kv[<span class="number">1</span>], kv[<span class="number">0</span>])))</span><br><span class="line"><span class="comment"># print(sorted(aDict.items()))</span></span><br><span class="line"><span class="comment"># sorted(aDict.values())</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Task G</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> aDict.items():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;&#123;0&#125;-&#123;1&#125;&#x27;</span>.<span class="built_in">format</span>(i[<span class="number">0</span>], i[<span class="number">1</span>]))</span><br><span class="line">   </span><br></pre></td></tr></table></figure>
-<h2 id="第二题"><a href="#第二题" class="headerlink" title="第二题"></a>第二题</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">####### CODE</span></span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line">l = <span class="built_in">list</span>(random.randint(<span class="number">0</span>, <span class="number">10</span>) <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">100</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;raw list:&#x27;</span>, l)</span><br><span class="line">d = <span class="built_in">dict</span>()</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> l:</span><br><span class="line">    i = <span class="built_in">str</span>(i)</span><br><span class="line">    <span class="keyword">if</span> i <span class="keyword">in</span> d.keys():</span><br><span class="line">        d[i] += <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        d[i] = <span class="number">1</span></span><br><span class="line"></span><br><span class="line">sorted_dict = <span class="built_in">sorted</span>(d.items(), key = <span class="keyword">lambda</span> kv : (kv[<span class="number">1</span>], kv[<span class="number">0</span>]))</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;Result(sorted): &#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> sorted_dict:</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure>
-<h2 id="第三题"><a href="#第三题" class="headerlink" title="第三题"></a>第三题</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">###### CODE</span></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    i = <span class="built_in">input</span>(<span class="string">&#x27;输入代码(直接回车以结束):&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> i == <span class="string">&#x27;3&#x27;</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;老板&#x27;</span>)</span><br><span class="line">    <span class="keyword">elif</span> i == <span class="string">&#x27;2&#x27;</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;用户&#x27;</span>)</span><br><span class="line">    <span class="keyword">elif</span> i == <span class="string">&#x27;1&#x27;</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;员工&#x27;</span>)</span><br><span class="line">    <span class="keyword">elif</span> i == <span class="string">&#x27;&#x27;</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;bye!&#x27;</span>)</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;错误类型&#x27;</span>)</span><br></pre></td></tr></table></figure>
-<p>还有一种讨巧的办法：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">d = &#123;<span class="number">3</span> : <span class="string">&#x27;老板&#x27;</span>, <span class="number">2</span>: <span class="string">&#x27;员工&#x27;</span>, <span class="number">1</span>: <span class="string">&#x27;用户&#x27;</span>&#125;</span><br><span class="line"><span class="built_in">print</span>(d.get(<span class="built_in">int</span>(<span class="built_in">input</span>()), <span class="string">&#x27;错误类型&#x27;</span>))</span><br></pre></td></tr></table></figure>
-<h2 id="第四题"><a href="#第四题" class="headerlink" title="第四题"></a>第四题</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">####### CODE</span></span><br><span class="line">i = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;月利润:&#x27;</span>))</span><br><span class="line">o = <span class="number">0</span></span><br><span class="line"><span class="keyword">if</span> i &lt;= <span class="number">1e5</span>:</span><br><span class="line">    o = i * <span class="number">0.05</span></span><br><span class="line"><span class="keyword">elif</span> <span class="number">1e5</span> &lt;= i &lt;= <span class="number">2e5</span>:</span><br><span class="line">    o = i * <span class="number">0.075</span></span><br><span class="line"><span class="keyword">elif</span> i &gt;= <span class="number">2e5</span>:</span><br><span class="line">    o = i * <span class="number">0.1</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;奖金: &#x27;</span>, o)</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1461,20 +1459,20 @@ H_1 \wedge H_2 \wedge \cdots \wedge H_m \Rightarrow (R \to C)</script><p>设$A =
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">23</span>
+          <span class="site-state-item-count">24</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-count">17</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-count">28</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
